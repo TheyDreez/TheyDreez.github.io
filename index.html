@@ -6,11 +6,15 @@
     <meta name="description" content="André Rogério - IT Analyst & Software Engineer Portfolio">
     <title>André Rogério | IT Department, Scranton Branch</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Inter:wght@400;500;600&family=Courier+Prime&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
         <div class="nav-container">
-            <div class="logo">Dunder Mifflin IT</div>
+            <div class="logo">DM IT</div>
             <nav>
                 <ul>
                     <li><a href="#about">Employee Record</a></li>
@@ -25,6 +29,7 @@
     <main>
         <section id="hero" class="hero-section">
             <div class="hero-content">
+                <div class="letterhead-accent"></div>
                 <h1>André Rogério</h1>
                 <h2>IT Analyst</h2>
                 <p><em>"I am fast. To give you a reference point, I’m somewhere between a snake and a mongoose… and a python script."</em></p>
@@ -34,25 +39,28 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/hero.jpg" alt="Illustration of a modern IT workspace with dual monitors, coding screens, and a 'World's Best Boss' mug in a classic office setting">
-                <p class="caption">Image prompt generated for Dunder Mifflin IT aesthetic.</p>
+                <div class="polaroid">
+                    <img src="assets/hero.jpg" alt="Illustration of a modern IT workspace with dual monitors, coding screens, and a 'World's Best Boss' mug in a classic office setting">
+                </div>
             </div>
         </section>
 
         <section id="about" class="about-section">
-            <div class="container">
-                <div class="card employee-record">
+            <div class="container cards-wrapper">
+                
+                <div class="card hr-form">
+                    <div class="form-stamp">FORM-HR-101</div>
                     <div class="card-header">
-                        <h3>🏢 Official Employee Record</h3>
+                        <h3>Official Employee Record</h3>
                     </div>
                     <div class="card-body">
-                        <ul class="record-list">
-                            <li><strong>Name:</strong> André Rogério (TheyDreez)</li>
-                            <li><strong>Department:</strong> IT & Solutions Support</li>
-                            <li><strong>Branch:</strong> Scranton (Remote)</li>
-                            <li><strong>Current Role:</strong> IT Analyst</li>
-                            <li><strong>Focus:</strong> Application Support / IT Solutions / Automation / Software Engineering</li>
-                            <li><strong>Career Direction:</strong> IT Solutions &rarr; Cloud/AI &rarr; Solution Architecture</li>
+                        <ul class="form-list">
+                            <li><span class="label">Name:</span> <span class="value">André Rogério (TheyDreez)</span></li>
+                            <li><span class="label">Department:</span> <span class="value">IT</span></li>
+                            <li><span class="label">Branch:</span> <span class="value">Scranton (Remote)</span></li>
+                            <li><span class="label">Current Role:</span> <span class="value">IT Analyst</span></li>
+                            <li><span class="label">Focus:</span> <span class="value">Application Support / IT Solutions / Automation / Software Engineering</span></li>
+                            <li><span class="label">Direction:</span> <span class="value">IT Solutions &rarr; Cloud/AI &rarr; Solution Architecture</span></li>
                         </ul>
                         <p class="memo"><strong>MEMO:</strong> Please stop asking if we have more toner. We don't. Submit a ticket.</p>
                     </div>
@@ -60,16 +68,26 @@
 
                 <div class="card dundies">
                     <div class="card-header">
-                        <h3>🏆 The Dundies (Core Proficiencies)</h3>
+                        <h3>🏆 The Dundies</h3>
                     </div>
                     <div class="card-body">
                         <ul class="dundie-list">
-                            <li><strong>Best Ticket Troubleshooter:</strong> Diagnosing the undiagnosable since day one.</li>
-                            <li><strong>Most Likely to Automate It:</strong> If I do it twice, I write a script for it.</li>
-                            <li><strong>Best SQL Query at 5:47 PM:</strong> For when the report is due at 6:00 PM.</li>
+                            <li>
+                                <strong>Best Ticket Troubleshooter</strong>
+                                <span>Diagnosing the undiagnosable since day one.</span>
+                            </li>
+                            <li>
+                                <strong>Most Likely to Automate It</strong>
+                                <span>If I do it twice, I write a script for it.</span>
+                            </li>
+                            <li>
+                                <strong>Best SQL Query at 5:47 PM</strong>
+                                <span>For when the report is due at 6:00 PM.</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -141,7 +159,7 @@
         <section id="architecture" class="architecture-section">
             <div class="container">
                 <h2>⚙️ What I Actually Build</h2>
-                <p class="serious-disclaimer">This section is fully serious. No jokes. Just engineering.</p>
+                <div class="serious-disclaimer">This section is fully serious. No jokes. Just engineering.</div>
                 <p class="arch-intro">When I am not solving day-to-day operational issues, I engineer resilient, secure, and scalable IT solutions. My focus is on eliminating manual toil through intelligent automation and robust application architecture.</p>
                 
                 <div class="arch-grid">
@@ -178,4 +196,3 @@
     </footer>
 </body>
 </html>
-
