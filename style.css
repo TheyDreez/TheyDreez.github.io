@@ -514,3 +514,70 @@ footer {
     margin-bottom: 20px;
     display: inline-block;
 }
+/* Profile Intro Section */
+.profile-intro-section {
+    background-color: var(--c-offwhite);
+    border-top: 1px solid var(--c-papergray);
+    padding: 80px 0;
+}
+.intro-grid {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+.intro-main {
+    flex: 3;
+    font-size: 1.05rem;
+    color: var(--c-charcoal);
+}
+.intro-main p { margin-bottom: 1.2rem; }
+.intro-sidebar {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--c-beige);
+    padding: 30px;
+    border: 1px solid var(--c-papergray);
+}
+.sidebar-block { display: flex; flex-direction: column; gap: 8px; }
+.sidebar-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--c-brown);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.sidebar-value {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+.progression-flow {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--c-charcoal);
+}
+.intro-secondary-grid {
+    display: flex;
+    gap: 60px;
+    border-top: 1px solid var(--c-papergray);
+    padding-top: 40px;
+}
+.secondary-block {
+    flex: 1;
+}
+.secondary-block h4 {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--c-brown);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+.secondary-block p {
+    font-size: 0.95rem;
+    color: var(--c-charcoal);
+}
+@media (max-width: 850px) {
+    .intro-grid, .intro-secondary-grid { flex-direction: column; gap: 40px; }
+}
