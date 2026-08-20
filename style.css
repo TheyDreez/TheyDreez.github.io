@@ -489,3 +489,28 @@ footer {
 @media (max-width: 600px) {
     .footer-content { flex-direction: column; gap: 10px; }
 }
+/* Confidential Notice */
+.confidential-notice {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--c-brown);
+    background-color: var(--c-offwhite);
+    border: 1px dashed #B8A89A;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Confidential Notice */
+.confidential-notice {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--c-brown);
+    background-color: var(--c-offwhite);
+    border: 1px dashed #B8A89A;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
