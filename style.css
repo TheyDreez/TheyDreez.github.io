@@ -396,3 +396,29 @@ footer {
 @media (max-width: 600px) {
     .footer-content { flex-direction: column; gap: 10px; }
 }
+
+/* Profile Photo styling */
+.profile-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid var(--c-papergray);
+    padding: 3px;
+    background: white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transform: rotate(-2deg);
+    flex-shrink: 0;
+}
+.file-details {
+    flex: 1;
+}
+@media (max-width: 600px) {
+    .profile-header { flex-direction: column; align-items: center; text-align: center; }
+    .file-row { justify-content: center; }
+    .profile-photo { transform: rotate(0deg); margin-bottom: 15px; }
+}
