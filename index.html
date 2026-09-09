@@ -40,31 +40,37 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="camera-frame" id="hero-camera-container">
-                        <!-- Mockumentary Camera HUD Controls -->
-                        <div class="camera-hud-top">
-                            <div class="rec-status">
-                                <span class="rec-blinker"></span>
-                                <span class="rec-label">REC</span>
-                                <span class="cam-label">CAM 01</span>
+                    <div class="camera-frame-wrapper">
+                        <!-- Switcher Bar: Talking Head vs CRT Terminal -->
+                        <div class="view-switcher-bar">
+                            <div class="rec-indicator">
+                                <span class="rec-dot"></span>
+                                <span>REC &middot; INTERVIEW</span>
                             </div>
-                            <div class="mode-toggles">
-                                <button type="button" class="cam-btn active" id="btn-mode-cam" onclick="switchHeroVisual('cam')">PORTRAIT</button>
-                                <button type="button" class="cam-btn" id="btn-mode-shader" onclick="switchHeroVisual('shader')">WEBGL SHADER</button>
+                            <div class="view-toggle-btns">
+                                <button type="button" class="view-toggle-btn active" id="btn-mode-cam" onclick="switchHeroVisual('cam')">TALKING HEAD</button>
+                                <button type="button" class="view-toggle-btn" id="btn-mode-shader" onclick="switchHeroVisual('shader')">CRT TERMINAL (WEBGL)</button>
                             </div>
                         </div>
 
-                        <!-- Visual Content: Photo or WebGL Shader -->
-                        <img src="assets/user_hero.jpg" alt="André Rogério in a corporate IT setting" id="hero-photo">
-                        <canvas id="hero-shader-canvas" class="shader-canvas" style="display: none;"></canvas>
-
-                        <!-- Mockumentary Camera HUD Bottom -->
-                        <div class="camera-hud-bottom">
-                            <span class="hud-spec">35MM F/1.8 &middot; ISO 400</span>
-                            <span class="hud-timecode" id="hud-timecode">00:14:48:12</span>
+                        <!-- 1. The Talking Head Interview Frame -->
+                        <div class="camera-frame" id="hero-camera-container">
+                            <img src="assets/user_hero.jpg" alt="André Rogério in a corporate IT setting" id="hero-photo">
+                            <!-- Lower-third Documentary Nameplate (The Office Style) -->
+                            <div class="talking-head-lower-third" id="hero-lower-third">
+                                <div class="talking-head-name">ANDRÉ ROGÉRIO</div>
+                                <div class="talking-head-role" data-i18n="lower_third_role">Software Engineer &middot; Solutions Architecture, IT Dept</div>
+                            </div>
                         </div>
+
+                        <!-- 2. Vintage CRT Monitor with WebGL Shader -->
+                        <div class="crt-monitor-casing" id="hero-crt-container" style="display: none;">
+                            <canvas id="hero-shader-canvas" class="crt-screen"></canvas>
+                            <div class="crt-badge">PHOSPHOR GREEN &middot; 60HZ</div>
+                        </div>
+
+                        <div class="doc-caption" id="hero-caption">[Confessional Cam: Dunder Mifflin IT Department]</div>
                     </div>
-                    <div class="doc-caption" id="hero-caption">[Confessional Cam: Dunder Mifflin IT Dept]</div>
                 </div>
             </div>
         </section>
@@ -110,6 +116,15 @@
                         <p data-i18n="beyond_p3">From exploring the city at night to discussing a book, building a fictional world around a table, or tracing my family roots across generations, I enjoy discovering completely different environments, ideas and people.</p>
                     </div>
                 </div>
+
+                <!-- The Dundie Award Box -->
+                <div class="dundie-box">
+                    <div class="dundie-icon">🏆</div>
+                    <div class="dundie-text">
+                        <h5 data-i18n="dundie_title">2026 DUNDIE AWARD NOMINEE</h5>
+                        <p data-i18n="dundie_desc">"Most Likely to Automate His Own Job with AI" &middot; Scranton Corporate IT Division</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -125,6 +140,10 @@
                     <!-- Project 1 -->
                     <div class="project-card">
                         <div class="card-inner">
+                            <div class="dossier-tab-header">
+                                <span class="dossier-code">📁 DOSSIER // ONBOARDING-OS</span>
+                                <span class="stamp-badge">CONFIDENTIAL</span>
+                            </div>
                             <h4>ONBOARDING OS</h4>
                             <p class="desc" data-i18n="proj1_desc">A multi-tenant SaaS platform for onboarding automation connecting HR, IT, and managers. Features PostgreSQL Row-Level Security for tenant isolation, AES-256-GCM document encryption, automated LGPD data lifecycle (daily anonymization worker), validated state machine transitions, and real-time operational visibility.</p>
                             <div class="tech-stack">React 19, TypeScript, Node.js, Express, PostgreSQL, Supabase, Socket.io, Redis, Zod, bcrypt, JWT</div>
@@ -139,6 +158,10 @@
                     <!-- Project 2 -->
                     <div class="project-card">
                         <div class="card-inner">
+                            <div class="dossier-tab-header">
+                                <span class="dossier-code">📁 DOSSIER // CBI-OPS-CENTER</span>
+                                <span class="stamp-badge" style="border-color: #10B981; color: #10B981;">PRODUCTION</span>
+                            </div>
                             <h4>INTERNAL TICKETING SYSTEM</h4>
                             
                             <!-- Interactive Visual Showcase -->
@@ -154,7 +177,7 @@
 
                             <p class="desc" data-i18n="proj2_desc">An AI-powered ITSM platform with intelligent ticket deflection, structured intake, and deterministic AI validation. Uses a confined AI pattern: probabilistic model &rarr; structured output (typed JSON schema) &rarr; deterministic validation &rarr; fallback rules &rarr; application action. Integrates Microsoft Graph API for Intune device compliance telemetry.</p>
                             <div class="tech-stack">Next.js 16, TypeScript, Supabase, Socket.io, Redis, Gemini 2.5 Flash, Microsoft Graph API, Zod</div>
-                            <div class="status" data-i18n="proj2_status">Status: Production Deployment - September 2026<br><span style="color: var(--c-charcoal); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj2_status_2">Initial deployment: 22 users</span></div>
+                            <div class="status" data-i18n="proj2_status">Status: Production Deployment - September 2026<br><span style="color: var(--c-ink-muted); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj2_status_2">Initial deployment: 22 users</span></div>
                             <div class="confidential-notice" data-i18n="confidential_notice_2">🔒 UI Dashboards & Demos sanitized for public showcase (LGPD/Confidentiality protected).</div>
                             <div class="links">
                                 <a href="https://github.com/TheyDreez/ticketing-system-portfolio" target="_blank" class="btn btn-outline" data-i18n="repo_link_2">Repository</a>
@@ -165,10 +188,14 @@
                     <!-- Project 3 -->
                     <div class="project-card">
                         <div class="card-inner">
+                            <div class="dossier-tab-header">
+                                <span class="dossier-code">📁 DOSSIER // MEMORY-LENS</span>
+                                <span class="stamp-badge" style="border-color: #1E3A5F; color: #1E3A5F;">RESEARCH</span>
+                            </div>
                             <h4>MEMORY LENS</h4>
                             <p class="desc" data-i18n="proj3_desc">A cognitive computing platform combining semantic search with vector embeddings, knowledge graphs, episodic memory clustering, forgetting mechanisms (Ebbinghaus curve), behavioral analysis via Identity Engine, and a 3D spatial interface with custom WebGL shaders. Features 16 API routes, IDOR security tests, and a Chief Organism rendered with React Three Fiber.</p>
                             <div class="tech-stack">React, TypeScript, Express, Firebase, Google Gemini API, Three.js, React Three Fiber, Vitest</div>
-                            <div class="status" data-i18n="proj3_status">Status: Active Research<br><span style="color: var(--c-charcoal); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj3_status_2">Academic research under Prof. Dr. Fabrício Londero (UniFacens)</span></div>
+                            <div class="status" data-i18n="proj3_status">Status: Active Research<br><span style="color: var(--c-ink-muted); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj3_status_2">Academic research under Prof. Dr. Fabrício Londero (UniFacens)</span></div>
                             <div class="links">
                                 <a href="https://github.com/TheyDreez/memory-lens-portfolio" target="_blank" class="btn btn-outline" data-i18n="repo_link_3">Repository</a>
                             </div>
@@ -178,10 +205,14 @@
                     <!-- Project 4 -->
                     <div class="project-card">
                         <div class="card-inner">
+                            <div class="dossier-tab-header">
+                                <span class="dossier-code">📁 DOSSIER // FUNDIVR</span>
+                                <span class="stamp-badge" style="border-color: #C58B17; color: #C58B17;">DELIVERED</span>
+                            </div>
                             <h4>FUNDIVR</h4>
                             <p class="desc" data-i18n="proj4_desc">A web-based VR simulator for training aluminum furnace operators. Features a full operational training workflow (PPE check, charge inspection, thermal control, skimming, emergency shutdown), real-time telemetry via WebSocket, automated performance scoring with weighted evaluation, and a resilient demo mode for presentations without database dependencies.</p>
                             <div class="tech-stack">React, TypeScript, Fastify, PostgreSQL, Prisma, WebSocket, Docker Compose, pnpm monorepo, Vitest</div>
-                            <div class="status" data-i18n="proj4_status">Status: Delivered<br><span style="color: var(--c-charcoal); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj4_status_2">Digital Twin & 5G Residency (TIC 51)</span></div>
+                            <div class="status" data-i18n="proj4_status">Status: Delivered<br><span style="color: var(--c-ink-muted); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj4_status_2">Digital Twin & 5G Residency (TIC 51)</span></div>
                             <div class="links">
                                 <a href="https://github.com/TheyDreez/fundivr-training-simulator" target="_blank" class="btn btn-outline" data-i18n="repo_link_4">Repository</a>
                             </div>
@@ -397,7 +428,10 @@
                 btn_github: "GitHub",
                 btn_linkedin: "LinkedIn",
                 footer_text: "&copy; 2026 André Rogério",
-                note: "Reviewed by Dwight Schrute"
+                note: "Reviewed by Dwight Schrute",
+                lower_third_role: "Software Engineer &middot; Solutions Architecture, IT Dept",
+                dundie_title: "2026 DUNDIE AWARD NOMINEE",
+                dundie_desc: "\"Most Likely to Automate His Own Job with AI\" &middot; Scranton Corporate IT Division"
             },
             pt: {
                 title: "André Rogério | Engenheiro de Software",
@@ -479,7 +513,11 @@
                 btn_github: "GitHub",
                 btn_linkedin: "LinkedIn",
                 footer_text: "&copy; 2026 André Rogério",
-                note: "Revisado por Dwight Schrute"
+                note: "Revisado por Dwight Schrute",
+                lower_third_role: "Engenheiro de Software &middot; Arquitetura de Soluções, Depto. de TI",
+                dundie_title: "INDICADO AO PRÊMIO DUNDIE 2026",
+                dundie_desc: "\"Mais Provável de Automatizar o Próprio Trabalho com IA\" &middot; Divisão de TI Corporativa"
+            }
             }
         };
 
@@ -553,28 +591,28 @@
         // Switch between Camera Portrait & WebGL Shader
         let shaderInitialized = false;
         window.switchHeroVisual = function(mode) {
-            const photo = document.getElementById('hero-photo');
-            const canvas = document.getElementById('hero-shader-canvas');
+            const camBox = document.getElementById('hero-camera-container');
+            const crtBox = document.getElementById('hero-crt-container');
             const btnCam = document.getElementById('btn-mode-cam');
             const btnShader = document.getElementById('btn-mode-shader');
             const caption = document.getElementById('hero-caption');
 
             if (mode === 'shader') {
-                photo.style.display = 'none';
-                canvas.style.display = 'block';
+                camBox.style.display = 'none';
+                crtBox.style.display = 'block';
                 btnShader.classList.add('active');
                 btnCam.classList.remove('active');
-                caption.innerHTML = "[Chief Cognitive Core &middot; Move cursor to deform geometry]";
+                caption.innerHTML = "[CRT Terminal: Cognitive Vector Core &middot; Phosphor Green 60Hz]";
                 if (!shaderInitialized) {
                     initHeroShader();
                     shaderInitialized = true;
                 }
             } else {
-                canvas.style.display = 'none';
-                photo.style.display = 'block';
+                crtBox.style.display = 'none';
+                camBox.style.display = 'block';
                 btnCam.classList.add('active');
                 btnShader.classList.remove('active');
-                caption.innerHTML = "[Confessional Cam: Dunder Mifflin IT Dept]";
+                caption.innerHTML = "[Confessional Cam: Dunder Mifflin IT Department]";
             }
         };
 
@@ -687,7 +725,8 @@
                         t += d * 0.7;
                     }
 
-                    vec3 col = vec3(0.05, 0.06, 0.08);
+                    // Authentic Scranton CRT dark cathode background
+                    vec3 col = vec3(0.02, 0.05, 0.03);
 
                     if(t < 7.0) {
                         vec3 p = ro + rd * t;
@@ -698,23 +737,26 @@
                             map(p + e.yyx) - map(p - e.yyx)
                         ));
 
-                        vec3 light = normalize(vec3(m.x + 0.6, -m.y + 1.2, 2.2));
+                        vec3 light = normalize(vec3(m.x + 0.5, -m.y + 1.2, 2.0));
                         float diff = max(dot(n, light), 0.0);
-                        float fresnel = pow(1.0 - max(dot(-rd, n), 0.0), 3.0);
+                        float fresnel = pow(1.0 - max(dot(-rd, n), 0.0), 2.5);
 
-                        vec3 coreColor = vec3(0.06, 0.75, 0.55);
-                        vec3 rimColor = vec3(0.95, 0.65, 0.15);
-                        vec3 specColor = vec3(0.38, 0.65, 0.98);
+                        // Scranton Phosphor Green Palette
+                        vec3 coreColor = vec3(0.13, 0.85, 0.38); // Phosphor Green #22c55e
+                        vec3 rimColor = vec3(0.48, 0.98, 0.65);  // Bright cathode rim
+                        vec3 specColor = vec3(0.85, 1.0, 0.9);   // Electron flare
 
-                        col = mix(vec3(0.04, 0.06, 0.08), coreColor, diff * 0.8);
-                        col += rimColor * (fresnel * 1.3);
-                        col += specColor * pow(max(dot(reflect(-light, n), -rd), 0.0), 16.0) * 0.6;
+                        col = mix(vec3(0.02, 0.06, 0.03), coreColor, diff * 0.9);
+                        col += rimColor * (fresnel * 1.4);
+                        col += specColor * pow(max(dot(reflect(-light, n), -rd), 0.0), 20.0) * 0.7;
 
-                        float scan = sin(p.y * 55.0 + u_time * 2.5) * 0.5 + 0.5;
-                        col += vec3(0.08, 0.35, 0.25) * scan * 0.18;
+                        // CRT horizontal raster scanlines
+                        float scan = sin(p.y * 65.0 + u_time * 3.0) * 0.5 + 0.5;
+                        col += vec3(0.1, 0.5, 0.2) * scan * 0.22;
                     }
 
-                    float vig = 1.0 - length(uv * 0.65);
+                    // CRT curvature vignette
+                    float vig = 1.0 - length(uv * 0.7);
                     col *= clamp(vig, 0.0, 1.0);
 
                     gl_FragColor = vec4(col, 1.0);
