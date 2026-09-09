@@ -581,3 +581,28 @@ footer {
 @media (max-width: 850px) {
     .intro-grid, .intro-secondary-grid { flex-direction: column; gap: 40px; }
 }
+/* Language Toggle Button */
+.lang-btn {
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    border-radius: 4px;
+    margin-left: 10px;
+    border: 1px solid var(--c-charcoal);
+    background: transparent;
+    color: var(--c-charcoal);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.lang-btn:hover {
+    background-color: var(--c-charcoal);
+    color: var(--c-offwhite);
+}
+@media (max-width: 600px) {
+    .lang-btn {
+        padding: 2px 6px;
+        font-size: 0.7rem;
+        margin-left: 5px;
+    }
+}
+

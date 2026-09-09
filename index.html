@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="André Rogério - IT Analyst | Enterprise Systems, Automation & AI">
-    <title>André Rogério | IT Analyst</title>
+    <meta name="description" content="André Rogério - Software Engineer | Solutions Architecture, Applied AI & Research">
+    <title data-i18n="title">André Rogério | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +16,12 @@
             <div class="logo">ANDRÉ ROGÉRIO</div>
             <nav>
                 <ul>
-                    <li><a href="#profile">PROFILE</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#engineering">ENGINEERING</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#profile" data-i18n="nav_profile">PROFILE</a></li>
+                    <li><a href="#projects" data-i18n="nav_projects">PROJECTS</a></li>
+                    <li><a href="#engineering" data-i18n="nav_engineering">ENGINEERING</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">CONTACT</a></li>
                 </ul>
+                <button id="lang-toggle" class="btn btn-outline lang-btn">PT</button>
             </nav>
         </div>
     </header>
@@ -31,62 +32,60 @@
             <div class="container hero-container">
                 <div class="hero-text">
                     <h1>ANDRÉ<br>ROGÉRIO</h1>
-                    <h2>IT Analyst | Enterprise Systems, Automation & AI</h2>
-                    <p class="hero-desc">I work across enterprise IT, application support and software engineering, building and deploying internal systems that turn operational problems into reliable workflows.</p>
+                    <h2 data-i18n="hero_h2">Software Engineer | Solutions Architecture, Applied AI & Research</h2>
+                    <p class="hero-desc" data-i18n="hero_desc">I build and research systems at the intersection of AI, software engineering, and real-world operations. I turn probabilistic models into reliable systems.</p>
                     <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="assets/Andre_Rogerio_Resume.pdf" target="_blank" class="btn btn-outline">Download Résumé</a>
+                        <a href="#projects" class="btn btn-primary" data-i18n="btn_projects">View Projects</a>
+                        <a href="assets/Andre_Rogerio_Resume.pdf" target="_blank" class="btn btn-outline" data-i18n="btn_resume">Download Résumé</a>
                     </div>
                 </div>
                 <div class="hero-visual">
                     <div class="camera-frame">
                         <img src="assets/user_hero.jpg" alt="André Rogério in a corporate IT setting">
-                        
                     </div>
                 </div>
             </div>
         </section>
 
-                <!-- PROFILE INTRO SECTION -->
+        <!-- PROFILE INTRO SECTION -->
         <section id="profile" class="profile-intro-section">
             <div class="container">
                 <div class="intro-grid">
                     <div class="intro-main">
-                        <p>I’m an IT Analyst working across enterprise applications, infrastructure and software engineering. My experience started in application support and has evolved toward automation, internal systems and applied AI.</p>
-                        <p>What I enjoy most about technology is the intersection between people, processes and systems. I like understanding how people actually work, identifying where technology can make their work easier, and turning those problems into practical, reliable solutions.</p>
-                        <p>Alongside my work in IT, I also volunteered as an English teacher. That experience had a lasting impact on how I approach technology: I genuinely enjoy communicating with people, explaining complex ideas clearly, understanding different perspectives and helping others learn and solve problems.</p>
+                        <p data-i18n="intro_p1">I'm a Software Engineer working across solutions architecture, applied AI, enterprise systems, and research. My path into technology started early, experimenting with PHP and running a homemade Habbo Hotel private server as a kid. Since then, I've moved through corporate IT, infrastructure, enterprise applications, industrial technology, applied AI, and research.</p>
+                        <p data-i18n="intro_p2">What drives me is the intersection between real problems and reliable systems. I like understanding how things actually work, designing the architecture, building the system, and making sure it survives contact with reality.</p>
+                        <p data-i18n="intro_p3">Alongside my work in engineering, I also volunteered as an English teacher. That experience shaped how I approach technology: I genuinely enjoy communicating with people, explaining complex ideas clearly, and helping others solve problems.</p>
                     </div>
                     
                     <div class="intro-sidebar">
                         <div class="sidebar-block">
-                            <span class="sidebar-label">CURRENT FOCUS</span>
-                            <div class="sidebar-value">Enterprise Applications &middot; Automation &middot; Software Engineering &middot; Applied AI</div>
+                            <span class="sidebar-label" data-i18n="lbl_focus">CURRENT FOCUS</span>
+                            <div class="sidebar-value" data-i18n="val_focus">Solutions Architecture &middot; Applied AI &middot; Digital Twins &middot; Knowledge Graphs &middot; Software Engineering</div>
                         </div>
                         <div class="sidebar-block">
-                            <span class="sidebar-label">CAREER DIRECTION</span>
-                            <div class="progression-flow">
-                                Enterprise IT &rarr; Application Support &rarr; Automation &rarr; Software Engineering &rarr; Applied AI
+                            <span class="sidebar-label" data-i18n="lbl_career">CAREER DIRECTION</span>
+                            <div class="progression-flow" data-i18n="val_career">
+                                Enterprise IT &rarr; Application Support &rarr; Automation &rarr; Software Engineering &rarr; Applied AI &rarr; Solutions Architecture
                             </div>
                         </div>
                         <div class="sidebar-block">
-                            <span class="sidebar-label">LONG-TERM DIRECTION</span>
-                            <div class="sidebar-value">Building reliable technology at the intersection of enterprise systems, AI, research and people.</div>
+                            <span class="sidebar-label" data-i18n="lbl_longterm">LONG-TERM DIRECTION</span>
+                            <div class="sidebar-value" data-i18n="val_longterm">Building reliable technology at the intersection of enterprise systems, AI, research and people.</div>
                         </div>
                     </div>
                 </div>
 
-                                <div class="intro-secondary-grid">
+                <div class="intro-secondary-grid">
                     <div class="secondary-block">
-                        <h4>RESEARCH</h4>
-                        <p><strong>Memory Lens is an independent project I conceived and developed, exploring spatial interfaces for semantic document organization, information discovery and applied AI. I’m currently developing a scientific research study based on the project under the guidance of Prof. Dr. Fabrício Tonetto Londero, a professor at UniFacens.</strong></p>
-                        <p>The research expands on the original Memory Lens implementation by investigating semantic document organization, information discovery and spatial interfaces in a formal research context.</p>
-                        <p>The project is evolving from an experimental MVP toward a formal academic study, with plans to submit and present the research at the <strong>International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)</strong> in Rio de Janeiro.</p>
+                        <h4 data-i18n="h4_research">RESEARCH</h4>
+                        <p><strong data-i18n="research_p1">Memory Lens is a cognitive computing platform I conceived and developed, combining semantic search, vector embeddings, knowledge graphs, episodic memory clustering, forgetting mechanisms inspired by Ebbinghaus' curve, behavioral analysis, and a 3D spatial interface built with React Three Fiber and custom WebGL shaders.</strong></p>
+                        <p data-i18n="research_p2">The project evolved into formal academic research on semantic document organization and spatial interfaces, under the guidance of Prof. Dr. Fabrício Tonetto Londero at UniFacens. The research is targeting submission to the International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA) in Rio de Janeiro.</p>
                     </div>
                     <div class="secondary-block">
-                        <h4>BEYOND TECHNOLOGY</h4>
-                        <p>I tend to move quickly between very different interests. I enjoy São Paulo’s nightlife and electronic music, but I also have a quieter side: I’m part of a book club in Sorocaba and recently started playing tabletop RPGs.</p>
-                        <p>I’m also currently going through the process of obtaining Spanish citizenship through my grandmother, who was born in Spain. One of my personal goals is to visit Calera de León, where she was born, and explore that part of my family history firsthand.</p>
-                        <p>From exploring the city at night to discussing a book, building a fictional world around a table, or tracing my family roots across generations, I enjoy discovering completely different environments, ideas and people.</p>
+                        <h4 data-i18n="h4_beyond">BEYOND TECHNOLOGY</h4>
+                        <p data-i18n="beyond_p1">I tend to move quickly between very different interests. I enjoy São Paulo's nightlife and electronic music, but I also have a quieter side: I'm part of a book club in Sorocaba and recently started playing tabletop RPGs.</p>
+                        <p data-i18n="beyond_p2">I'm also currently going through the process of obtaining Spanish citizenship through my grandmother, who was born in Spain. One of my personal goals is to visit Calera de León, where she was born, and explore that part of my family history firsthand.</p>
+                        <p data-i18n="beyond_p3">From exploring the city at night to discussing a book, building a fictional world around a table, or tracing my family roots across generations, I enjoy discovering completely different environments, ideas and people.</p>
                     </div>
                 </div>
             </div>
@@ -96,8 +95,8 @@
         <section id="projects" class="projects-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>SELECTED PROJECTS</h2>
-                    <p class="subtitle">Things that started as a quick idea and became significantly more complicated.</p>
+                    <h2 data-i18n="projects_h2">SELECTED PROJECTS</h2>
+                    <p class="subtitle" data-i18n="projects_sub">Things that started as a quick idea and became significantly more complicated.</p>
                 </div>
 
                 <div class="project-cards">
@@ -105,12 +104,12 @@
                     <div class="project-card">
                         <div class="card-inner">
                             <h4>ONBOARDING OS</h4>
-                            <p class="desc">A platform for business process automation connecting HR, IT, and managers. I engineered the backend services and data model to drive workflow orchestration and validated state transitions, providing real-time operational visibility.</p>
-                            <div class="tech-stack">React 19, Node.js, PostgreSQL, Supabase, Socket.io, Redis, Zod</div>
-                            <div class="status">Status: Active Development &mdash; Target Deployment 2026</div>
-                            <div class="confidential-notice">🔒 UI Dashboards & Demos available for presentation during live interviews (NDA protected).</div>
+                            <p class="desc" data-i18n="proj1_desc">A multi-tenant SaaS platform for onboarding automation connecting HR, IT, and managers. Features PostgreSQL Row-Level Security for tenant isolation, AES-256-GCM document encryption, automated LGPD data lifecycle (daily anonymization worker), validated state machine transitions, and real-time operational visibility.</p>
+                            <div class="tech-stack">React 19, TypeScript, Node.js, Express, PostgreSQL, Supabase, Socket.io, Redis, Zod, bcrypt, JWT</div>
+                            <div class="status" data-i18n="proj1_status">Status: Active Development - Target Deployment 2026</div>
+                            <div class="confidential-notice" data-i18n="confidential_notice">🔒 UI Dashboards & Demos available for presentation during live interviews (NDA protected).</div>
                             <div class="links">
-                                <a href="https://github.com/TheyDreez/onboarding-os-portfolio" target="_blank" class="btn btn-outline">Repository</a>
+                                <a href="https://github.com/TheyDreez/onboarding-os-portfolio" target="_blank" class="btn btn-outline" data-i18n="repo_link">Repository</a>
                             </div>
                         </div>
                     </div>
@@ -119,12 +118,12 @@
                     <div class="project-card">
                         <div class="card-inner">
                             <h4>INTERNAL TICKETING SYSTEM</h4>
-                            <p class="desc">An ITSM and application support platform being prepared for production deployment, featuring AI-assisted support. The system focuses on SLA tracking, structured request intake, ticket deflection, deterministic validation, and enterprise support workflows.</p>
-                            <div class="tech-stack">Next.js 16, TypeScript, Supabase, Gemini 2.5</div>
-                            <div class="status">Status: Production Deployment &mdash; September 2026<br><span style="color: var(--c-charcoal); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;">Initial deployment: 22 users</span></div>
-                            <div class="confidential-notice">🔒 UI Dashboards & Demos available for presentation during live interviews (NDA protected).</div>
+                            <p class="desc" data-i18n="proj2_desc">An AI-powered ITSM platform with intelligent ticket deflection, structured intake, and deterministic AI validation. Uses a confined AI pattern: probabilistic model &rarr; structured output (typed JSON schema) &rarr; deterministic validation &rarr; fallback rules &rarr; application action. Integrates Microsoft Graph API for Intune device compliance telemetry.</p>
+                            <div class="tech-stack">Next.js 16, TypeScript, Supabase, Socket.io, Redis, Gemini 2.5 Flash, Microsoft Graph API, Zod</div>
+                            <div class="status" data-i18n="proj2_status">Status: Production Deployment - September 2026<br><span style="color: var(--c-charcoal); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj2_status_2">Initial deployment: 22 users</span></div>
+                            <div class="confidential-notice" data-i18n="confidential_notice_2">🔒 UI Dashboards & Demos available for presentation during live interviews (NDA protected).</div>
                             <div class="links">
-                                <a href="https://github.com/TheyDreez/ticketing-system-portfolio" target="_blank" class="btn btn-outline">Repository</a>
+                                <a href="https://github.com/TheyDreez/ticketing-system-portfolio" target="_blank" class="btn btn-outline" data-i18n="repo_link_2">Repository</a>
                             </div>
                         </div>
                     </div>
@@ -133,11 +132,24 @@
                     <div class="project-card">
                         <div class="card-inner">
                             <h4>MEMORY LENS</h4>
-                            <p class="desc">An experimental knowledge interface that uses embeddings and semantic retrieval to organize and explore large document collections. Built for information discovery and applied AI via vector search.</p>
-                            <div class="tech-stack">React Three Fiber, Node.js, Gemini API</div>
-                            <div class="status">Status: MVP Experimental<br><span style="color: var(--c-charcoal); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;">Research in Progress</span></div>
+                            <p class="desc" data-i18n="proj3_desc">A cognitive computing platform combining semantic search with vector embeddings, knowledge graphs, episodic memory clustering, forgetting mechanisms (Ebbinghaus curve), behavioral analysis via Identity Engine, and a 3D spatial interface with custom WebGL shaders. Features 16 API routes, IDOR security tests, and a Chief Organism rendered with React Three Fiber.</p>
+                            <div class="tech-stack">React, TypeScript, Express, Firebase, Google Gemini API, Three.js, React Three Fiber, Vitest</div>
+                            <div class="status" data-i18n="proj3_status">Status: Active Research<br><span style="color: var(--c-charcoal); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj3_status_2">Academic research under Prof. Dr. Fabrício Londero (UniFacens)</span></div>
                             <div class="links">
-                                <a href="https://github.com/TheyDreez/memory-lens-portfolio" target="_blank" class="btn btn-outline">Repository</a>
+                                <a href="https://github.com/TheyDreez/memory-lens-portfolio" target="_blank" class="btn btn-outline" data-i18n="repo_link_3">Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <h4>FUNDIVR</h4>
+                            <p class="desc" data-i18n="proj4_desc">A web-based VR simulator for training aluminum furnace operators. Features a full operational training workflow (PPE check, charge inspection, thermal control, skimming, emergency shutdown), real-time telemetry via WebSocket, automated performance scoring with weighted evaluation, and a resilient demo mode for presentations without database dependencies.</p>
+                            <div class="tech-stack">React, TypeScript, Fastify, PostgreSQL, Prisma, WebSocket, Docker Compose, pnpm monorepo, Vitest</div>
+                            <div class="status" data-i18n="proj4_status">Status: Delivered<br><span style="color: var(--c-charcoal); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj4_status_2">Digital Twin & 5G Residency (TIC 51)</span></div>
+                            <div class="links">
+                                <a href="https://github.com/TheyDreez/fundivr-training-simulator" target="_blank" class="btn btn-outline" data-i18n="repo_link_4">Repository</a>
                             </div>
                         </div>
                     </div>
@@ -151,59 +163,59 @@
                 
                 <div class="about-grid">
                     <div class="employee-file">
-                        <div class="file-tab">PROFESSIONAL PROFILE</div>
+                        <div class="file-tab" data-i18n="prof_profile">PROFESSIONAL PROFILE</div>
                         <div class="file-content">
                             <div class="profile-header">
                                 <img src="assets/user_photo_1.png" alt="André Rogério" class="profile-photo">
                                 <div class="file-details">
                                     <div class="file-row">
-                                        <span class="file-label">Name:</span>
+                                        <span class="file-label" data-i18n="lbl_name">Name:</span>
                                         <span class="file-value">André Rogério</span>
                                     </div>
                                     <div class="file-row">
-                                        <span class="file-label">Role:</span>
-                                        <span class="file-value">Junior IT Analyst</span>
+                                        <span class="file-label" data-i18n="lbl_role">Role:</span>
+                                        <span class="file-value" data-i18n="val_role">Software Engineer</span>
                                     </div>
                                     <div class="file-row">
-                                        <span class="file-label">Location:</span>
-                                        <span class="file-value">São Paulo, Brazil</span>
+                                        <span class="file-label" data-i18n="lbl_location">Location:</span>
+                                        <span class="file-value" data-i18n="val_location">Sorocaba, São Paulo, Brazil</span>
                                     </div>
                                     <div class="file-row file-row-focus">
-                                        <span class="file-label">Focus:</span>
+                                        <span class="file-label" data-i18n="lbl_focus_list">Focus:</span>
                                         <div class="file-value focus-list">
-                                            <div>Enterprise Applications</div>
-                                            <div>IT Solutions</div>
-                                            <div>Automation</div>
-                                            <div>Software Engineering</div>
+                                            <div data-i18n="val_focus_1">Solutions Architecture</div>
+                                            <div data-i18n="val_focus_2">Applied AI</div>
+                                            <div data-i18n="val_focus_3">Software Engineering</div>
+                                            <div data-i18n="val_focus_4">Digital Twins & Research</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="sticky-note dwight-note">
+                            <div class="sticky-note dwight-note" data-i18n="note">
                                 Reviewed by Dwight Schrute
                             </div>
                         </div>
                     </div>
 
                     <div class="tech-profile">
-                        <h3>TECHNICAL CAPABILITIES</h3>
+                        <h3 data-i18n="tech_h3">TECHNICAL CAPABILITIES</h3>
                         
                         <div class="tech-grid">
                             <div class="tech-item">
-                                <strong>Enterprise IT & Application Support</strong>
-                                SAP, Sienge ERP, Microsoft 365, SharePoint, Teams, Entra ID, Intune, Active Directory.
+                                <strong data-i18n="tech1_cat">Solutions Architecture & Enterprise Systems</strong>
+                                <span data-i18n="tech1_val">SAP, Sienge ERP, Microsoft 365, Microsoft Graph API, Entra ID, Intune, Active Directory, SharePoint.</span>
                             </div>
                             <div class="tech-item">
-                                <strong>Software Engineering</strong>
-                                Python, TypeScript, React, Node.js, SQL, PostgreSQL.
+                                <strong data-i18n="tech2_cat">Software Engineering</strong>
+                                <span data-i18n="tech2_val">TypeScript, React, Next.js, Node.js, Python, PostgreSQL, Express, Fastify, Prisma.</span>
                             </div>
                             <div class="tech-item">
-                                <strong>Cloud & Data</strong>
-                                Google Cloud, Supabase, PostgreSQL.
+                                <strong data-i18n="tech3_cat">Cloud, Data & Security</strong>
+                                <span data-i18n="tech3_val">Google Cloud, Supabase, Firebase, Redis, Docker, PostgreSQL RLS, AES-256-GCM encryption.</span>
                             </div>
                             <div class="tech-item">
-                                <strong>Automation & Applied AI</strong>
-                                API integrations, Webhooks, Workflow automation, Google Gemini API, Structured outputs, Semantic retrieval, Vector search.
+                                <strong data-i18n="tech4_cat">Applied AI & Cognitive Systems</strong>
+                                <span data-i18n="tech4_val">Google Gemini API, structured outputs, semantic retrieval, vector embeddings, knowledge graphs, episodic memory, Three.js/React Three Fiber, WebGL shaders.</span>
                             </div>
                         </div>
                     </div>
@@ -215,34 +227,33 @@
         <section id="engineering" class="engineering-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>ENGINEERING APPROACH</h2>
-                    <p class="subtitle">Camera crew leaves. Engineering remains.</p>
+                    <h2 data-i18n="eng_h2">ENGINEERING APPROACH</h2>
+                    <p class="subtitle" data-i18n="eng_sub">Camera crew leaves. Engineering remains.</p>
                 </div>
 
                 <div class="eng-content">
                     <div class="eng-text">
-                        <p>Beyond day-to-day application support, I design internal tools and automations that reduce manual work, enforce reliable workflows and improve operational visibility.</p>
+                        <p data-i18n="eng_intro">I design and build systems that combine AI with deterministic logic, security, and real operational constraints.</p>
                         
                         <div class="eng-detail">
-                            <h5>Architecture and APIs</h5>
-                            <p>I structure applications around clear feature boundaries, service layers and validated state transitions. My primary backend stack includes Node.js, Express, Next.js API routes and PostgreSQL.</p>
+                            <h5 data-i18n="eng_cat1">Architecture and APIs</h5>
+                            <p data-i18n="eng_val1">I structure applications around clear service boundaries, validated state transitions, and type-safe contracts. My backend stack includes Node.js, Express, Fastify, Next.js API routes, PostgreSQL, and Supabase.</p>
                         </div>
                         
                         <div class="eng-detail">
-                            <h5>Data and Security</h5>
-                            <p>I use versioned database migrations, Row Level Security, secure session handling, expiring links, structured request validation and context-specific sanitization to reduce avoidable security and data-consistency risks.</p>
+                            <h5 data-i18n="eng_cat2">Data and Security</h5>
+                            <p data-i18n="eng_val2">I use versioned database migrations, PostgreSQL Row Level Security with session-scoped tenant isolation, AES-256-GCM encryption for sensitive documents, automated LGPD compliance workers, secure session handling, and structured request validation with Zod.</p>
                         </div>
                         
                         <div class="eng-detail">
-                            <h5>Integrations and AI</h5>
-                            <p>I build webhook-driven integrations for enterprise systems and use AI for constrained intent classification and semantic retrieval, with structured outputs, deterministic validation and fallback rules around model responses.</p>
+                            <h5 data-i18n="eng_cat3">Integrations and AI</h5>
+                            <p data-i18n="eng_val3">I build AI systems using a confined pattern: probabilistic model &rarr; structured output &rarr; deterministic validation &rarr; fallback rules &rarr; application action. The AI suggests, but never acts unsupervised. I also build webhook-driven integrations for enterprise systems (SAP, Microsoft Graph, ERP).</p>
                         </div>
                     </div>
                     <div class="eng-visual">
                         <div class="camera-frame">
-                            <!-- TODO: Replace with real architecture diagram from Onboarding OS -->
                             <img src="assets/whiteboard.jpg" alt="Conceptual architecture whiteboard sketch showing Frontend, Backend, Database, and Integrations">
-                            <div class="doc-caption">[Michael was not consulted on the architecture.]</div>
+                            <div class="doc-caption" data-i18n="eng_caption">[Michael was not consulted on the architecture.]</div>
                         </div>
                     </div>
                 </div>
@@ -252,11 +263,12 @@
         <!-- CONTACT SECTION -->
         <section id="contact" class="contact-section">
             <div class="container text-center">
-                <h2>Contact the IT Department</h2>
-                <p class="subtitle">No ticket required.</p>
+                <h2 data-i18n="contact_h2">Contact the IT Department</h2>
+                <p class="subtitle" data-i18n="contact_sub">No ticket required.</p>
                 
                 <div class="contact-links">
-                    <a href="https://github.com/TheyDreez" target="_blank" class="btn btn-primary">GitHub</a>
+                    <a href="https://github.com/TheyDreez" target="_blank" class="btn btn-primary" data-i18n="btn_github">GitHub</a>
+                    <a href="https://www.linkedin.com/in/andré-silvaf" target="_blank" class="btn btn-outline" data-i18n="btn_linkedin">LinkedIn</a>
                 </div>
             </div>
         </section>
@@ -265,8 +277,211 @@
 
     <footer>
         <div class="container footer-content">
-            <p>&copy; 2026 André Rogério</p>
+            <p data-i18n="footer_text">&copy; 2026 André Rogério</p>
         </div>
     </footer>
+
+    <script>
+        const translations = {
+            en: {
+                title: "André Rogério | Software Engineer",
+                hero_h2: "Software Engineer | Solutions Architecture, Applied AI & Research",
+                hero_desc: "I build and research systems at the intersection of AI, software engineering, and real-world operations. I turn probabilistic models into reliable systems.",
+                nav_profile: "PROFILE",
+                nav_projects: "PROJECTS",
+                nav_engineering: "ENGINEERING",
+                nav_contact: "CONTACT",
+                btn_projects: "View Projects",
+                btn_resume: "Download Résumé",
+                intro_p1: "I'm a Software Engineer working across solutions architecture, applied AI, enterprise systems, and research. My path into technology started early, experimenting with PHP and running a homemade Habbo Hotel private server as a kid. Since then, I've moved through corporate IT, infrastructure, enterprise applications, industrial technology, applied AI, and research.",
+                intro_p2: "What drives me is the intersection between real problems and reliable systems. I like understanding how things actually work, designing the architecture, building the system, and making sure it survives contact with reality.",
+                intro_p3: "Alongside my work in engineering, I also volunteered as an English teacher. That experience shaped how I approach technology: I genuinely enjoy communicating with people, explaining complex ideas clearly, and helping others solve problems.",
+                lbl_focus: "CURRENT FOCUS",
+                val_focus: "Solutions Architecture &middot; Applied AI &middot; Digital Twins &middot; Knowledge Graphs &middot; Software Engineering",
+                lbl_career: "CAREER DIRECTION",
+                val_career: "Enterprise IT &rarr; Application Support &rarr; Automation &rarr; Software Engineering &rarr; Applied AI &rarr; Solutions Architecture",
+                lbl_longterm: "LONG-TERM DIRECTION",
+                val_longterm: "Building reliable technology at the intersection of enterprise systems, AI, research and people.",
+                h4_research: "RESEARCH",
+                research_p1: "Memory Lens is a cognitive computing platform I conceived and developed, combining semantic search, vector embeddings, knowledge graphs, episodic memory clustering, forgetting mechanisms inspired by Ebbinghaus' curve, behavioral analysis, and a 3D spatial interface built with React Three Fiber and custom WebGL shaders.",
+                research_p2: "The project evolved into formal academic research on semantic document organization and spatial interfaces, under the guidance of Prof. Dr. Fabrício Tonetto Londero at UniFacens. The research is targeting submission to the International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA) in Rio de Janeiro.",
+                h4_beyond: "BEYOND TECHNOLOGY",
+                beyond_p1: "I tend to move quickly between very different interests. I enjoy São Paulo's nightlife and electronic music, but I also have a quieter side: I'm part of a book club in Sorocaba and recently started playing tabletop RPGs.",
+                beyond_p2: "I'm also currently going through the process of obtaining Spanish citizenship through my grandmother, who was born in Spain. One of my personal goals is to visit Calera de León, where she was born, and explore that part of my family history firsthand.",
+                beyond_p3: "From exploring the city at night to discussing a book, building a fictional world around a table, or tracing my family roots across generations, I enjoy discovering completely different environments, ideas and people.",
+                projects_h2: "SELECTED PROJECTS",
+                projects_sub: "Things that started as a quick idea and became significantly more complicated.",
+                proj1_desc: "A multi-tenant SaaS platform for onboarding automation connecting HR, IT, and managers. Features PostgreSQL Row-Level Security for tenant isolation, AES-256-GCM document encryption, automated LGPD data lifecycle (daily anonymization worker), validated state machine transitions, and real-time operational visibility.",
+                proj1_status: "Status: Active Development - Target Deployment 2026",
+                confidential_notice: "🔒 UI Dashboards & Demos available for presentation during live interviews (NDA protected).",
+                repo_link: "Repository",
+                proj2_desc: "An AI-powered ITSM platform with intelligent ticket deflection, structured intake, and deterministic AI validation. Uses a confined AI pattern: probabilistic model &rarr; structured output (typed JSON schema) &rarr; deterministic validation &rarr; fallback rules &rarr; application action. Integrates Microsoft Graph API for Intune device compliance telemetry.",
+                proj2_status: "Status: Production Deployment - September 2026",
+                proj2_status_2: "Initial deployment: 22 users",
+                confidential_notice_2: "🔒 UI Dashboards & Demos available for presentation during live interviews (NDA protected).",
+                repo_link_2: "Repository",
+                proj3_desc: "A cognitive computing platform combining semantic search with vector embeddings, knowledge graphs, episodic memory clustering, forgetting mechanisms (Ebbinghaus curve), behavioral analysis via Identity Engine, and a 3D spatial interface with custom WebGL shaders. Features 16 API routes, IDOR security tests, and a Chief Organism rendered with React Three Fiber.",
+                proj3_status: "Status: Active Research",
+                proj3_status_2: "Academic research under Prof. Dr. Fabrício Londero (UniFacens)",
+                repo_link_3: "Repository",
+                proj4_desc: "A web-based VR simulator for training aluminum furnace operators. Features a full operational training workflow (PPE check, charge inspection, thermal control, skimming, emergency shutdown), real-time telemetry via WebSocket, automated performance scoring with weighted evaluation, and a resilient demo mode for presentations without database dependencies.",
+                proj4_status: "Status: Delivered",
+                proj4_status_2: "Digital Twin & 5G Residency (TIC 51)",
+                repo_link_4: "Repository",
+                prof_profile: "PROFESSIONAL PROFILE",
+                lbl_name: "Name:",
+                lbl_role: "Role:",
+                val_role: "Software Engineer",
+                lbl_location: "Location:",
+                val_location: "Sorocaba, São Paulo, Brazil",
+                lbl_focus_list: "Focus:",
+                val_focus_1: "Solutions Architecture",
+                val_focus_2: "Applied AI",
+                val_focus_3: "Software Engineering",
+                val_focus_4: "Digital Twins & Research",
+                tech_h3: "TECHNICAL CAPABILITIES",
+                tech1_cat: "Solutions Architecture & Enterprise Systems",
+                tech1_val: "SAP, Sienge ERP, Microsoft 365, Microsoft Graph API, Entra ID, Intune, Active Directory, SharePoint.",
+                tech2_cat: "Software Engineering",
+                tech2_val: "TypeScript, React, Next.js, Node.js, Python, PostgreSQL, Express, Fastify, Prisma.",
+                tech3_cat: "Cloud, Data & Security",
+                tech3_val: "Google Cloud, Supabase, Firebase, Redis, Docker, PostgreSQL RLS, AES-256-GCM encryption.",
+                tech4_cat: "Applied AI & Cognitive Systems",
+                tech4_val: "Google Gemini API, structured outputs, semantic retrieval, vector embeddings, knowledge graphs, episodic memory, Three.js/React Three Fiber, WebGL shaders.",
+                eng_h2: "ENGINEERING APPROACH",
+                eng_sub: "Camera crew leaves. Engineering remains.",
+                eng_intro: "I design and build systems that combine AI with deterministic logic, security, and real operational constraints.",
+                eng_cat1: "Architecture and APIs",
+                eng_val1: "I structure applications around clear service boundaries, validated state transitions, and type-safe contracts. My backend stack includes Node.js, Express, Fastify, Next.js API routes, PostgreSQL, and Supabase.",
+                eng_cat2: "Data and Security",
+                eng_val2: "I use versioned database migrations, PostgreSQL Row Level Security with session-scoped tenant isolation, AES-256-GCM encryption for sensitive documents, automated LGPD compliance workers, secure session handling, and structured request validation with Zod.",
+                eng_cat3: "Integrations and AI",
+                eng_val3: "I build AI systems using a confined pattern: probabilistic model &rarr; structured output &rarr; deterministic validation &rarr; fallback rules &rarr; application action. The AI suggests, but never acts unsupervised. I also build webhook-driven integrations for enterprise systems (SAP, Microsoft Graph, ERP).",
+                eng_caption: "[Michael was not consulted on the architecture.]",
+                contact_h2: "Contact the IT Department",
+                contact_sub: "No ticket required.",
+                btn_github: "GitHub",
+                btn_linkedin: "LinkedIn",
+                footer_text: "&copy; 2026 André Rogério",
+                note: "Reviewed by Dwight Schrute"
+            },
+            pt: {
+                title: "André Rogério | Engenheiro de Software",
+                hero_h2: "Engenheiro de Software | Arquitetura de Soluções, IA Aplicada & Pesquisa",
+                hero_desc: "Eu construo e pesquiso sistemas na intersecção entre IA, engenharia de software e operações reais. Eu transformo modelos probabilísticos em sistemas confiáveis.",
+                nav_profile: "PERFIL",
+                nav_projects: "PROJETOS",
+                nav_engineering: "ENGENHARIA",
+                nav_contact: "CONTATO",
+                btn_projects: "Ver Projetos",
+                btn_resume: "Baixar Currículo",
+                intro_p1: "Sou Engenheiro de Software atuando em arquitetura de soluções, IA aplicada, sistemas corporativos e pesquisa. Meu caminho na tecnologia começou cedo, experimentando com PHP e montando um servidor privado de Habbo Hotel quando criança. Desde então, passei por TI corporativo, infraestrutura, aplicações empresariais, tecnologia industrial, IA aplicada e pesquisa.",
+                intro_p2: "O que me motiva é a intersecção entre problemas reais e sistemas confiáveis. Gosto de entender como as coisas realmente funcionam, projetar a arquitetura, construir o sistema e garantir que ele sobreviva ao contato com a realidade.",
+                intro_p3: "Além do meu trabalho em engenharia, também fui professor voluntário de inglês. Essa experiência moldou a forma como eu abordo tecnologia: gosto genuinamente de me comunicar com pessoas, explicar ideias complexas de forma clara e ajudar outros a resolver problemas.",
+                lbl_focus: "FOCO ATUAL",
+                val_focus: "Arquitetura de Soluções &middot; IA Aplicada &middot; Gêmeos Digitais &middot; Grafos de Conhecimento &middot; Engenharia de Software",
+                lbl_career: "DIREÇÃO DE CARREIRA",
+                val_career: "TI Corporativo &rarr; Suporte de Aplicações &rarr; Automação &rarr; Engenharia de Software &rarr; IA Aplicada &rarr; Arquitetura de Soluções",
+                lbl_longterm: "DIREÇÃO DE LONGO PRAZO",
+                val_longterm: "Construindo tecnologia confiável na intersecção entre sistemas corporativos, IA, pesquisa e pessoas.",
+                h4_research: "PESQUISA",
+                research_p1: "O Memory Lens é uma plataforma de computação cognitiva que eu concebi e desenvolvi, combinando busca semântica, embeddings vetoriais, grafos de conhecimento, agrupamento de memória episódica, mecanismos de esquecimento inspirados na curva de Ebbinghaus, análise comportamental e uma interface espacial 3D construída com React Three Fiber e shaders WebGL customizados.",
+                research_p2: "O projeto evoluiu para uma pesquisa acadêmica formal sobre organização semântica de documentos e interfaces espaciais, sob a orientação do Prof. Dr. Fabrício Tonetto Londero na UniFacens. A pesquisa tem como alvo submissão para a International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA) no Rio de Janeiro.",
+                h4_beyond: "ALÉM DA TECNOLOGIA",
+                beyond_p1: "Costumo transitar rapidamente entre interesses muito diferentes. Gosto da vida noturna de São Paulo e música eletrônica, mas também tenho um lado mais tranquilo: faço parte de um clube do livro em Sorocaba e recentemente comecei a jogar RPG de mesa.",
+                beyond_p2: "Também estou passando pelo processo de obtenção de cidadania espanhola através da minha avó, que nasceu na Espanha. Um dos meus objetivos pessoais é visitar Calera de León, onde ela nasceu, e explorar essa parte da história da minha família pessoalmente.",
+                beyond_p3: "Desde explorar a cidade à noite até discutir um livro, construir um mundo ficcional ao redor de uma mesa, ou traçar as raízes da minha família por gerações, eu gosto de descobrir ambientes, ideias e pessoas completamente diferentes.",
+                projects_h2: "PROJETOS SELECIONADOS",
+                projects_sub: "Coisas que começaram como uma ideia rápida e se tornaram significativamente mais complicadas.",
+                proj1_desc: "Uma plataforma SaaS multi-tenant para automação de onboarding conectando RH, TI e gestores. Possui PostgreSQL Row-Level Security para isolamento de tenants, criptografia de documentos AES-256-GCM, ciclo de vida de dados LGPD automatizado (worker diário de anonimização), transições de máquina de estados validadas e visibilidade operacional em tempo real.",
+                proj1_status: "Status: Desenvolvimento Ativo - Meta de Implantação 2026",
+                confidential_notice: "🔒 Dashboards de UI & Demos disponíveis para apresentação durante entrevistas ao vivo (protegido por NDA).",
+                repo_link: "Repositório",
+                proj2_desc: "Uma plataforma ITSM alimentada por IA com deflexão inteligente de chamados, recebimento estruturado e validação determinística de IA. Usa um padrão de IA confinada: modelo probabilístico &rarr; saída estruturada (schema JSON tipado) &rarr; validação determinística &rarr; regras de fallback &rarr; ação na aplicação. Integra a Microsoft Graph API para telemetria de conformidade de dispositivos Intune.",
+                proj2_status: "Status: Implantação em Produção - Setembro 2026",
+                proj2_status_2: "Implantação inicial: 22 usuários",
+                confidential_notice_2: "🔒 Dashboards de UI & Demos disponíveis para apresentação durante entrevistas ao vivo (protegido por NDA).",
+                repo_link_2: "Repositório",
+                proj3_desc: "Uma plataforma de computação cognitiva combinando busca semântica com embeddings vetoriais, grafos de conhecimento, agrupamento de memória episódica, mecanismos de esquecimento (curva de Ebbinghaus), análise comportamental via Identity Engine, e uma interface espacial 3D com shaders WebGL customizados. Possui 16 rotas de API, testes de segurança IDOR e um Organismo Chefe renderizado com React Three Fiber.",
+                proj3_status: "Status: Pesquisa Ativa",
+                proj3_status_2: "Pesquisa acadêmica sob o Prof. Dr. Fabrício Londero (UniFacens)",
+                repo_link_3: "Repositório",
+                proj4_desc: "Um simulador VR baseado na web para treinamento de operadores de forno de alumínio. Possui um fluxo de trabalho completo de treinamento operacional (verificação de EPI, inspeção de carga, controle térmico, escumação, desligamento de emergência), telemetria em tempo real via WebSocket, pontuação de desempenho automatizada com avaliação ponderada, e um modo de demonstração resiliente para apresentações sem dependências de banco de dados.",
+                proj4_status: "Status: Entregue",
+                proj4_status_2: "Residência de Gêmeo Digital & 5G (TIC 51)",
+                repo_link_4: "Repositório",
+                prof_profile: "PERFIL PROFISSIONAL",
+                lbl_name: "Nome:",
+                lbl_role: "Cargo:",
+                val_role: "Engenheiro de Software",
+                lbl_location: "Localização:",
+                val_location: "Sorocaba, São Paulo, Brasil",
+                lbl_focus_list: "Foco:",
+                val_focus_1: "Arquitetura de Soluções",
+                val_focus_2: "IA Aplicada",
+                val_focus_3: "Engenharia de Software",
+                val_focus_4: "Gêmeos Digitais & Pesquisa",
+                tech_h3: "CAPACIDADES TÉCNICAS",
+                tech1_cat: "Arquitetura de Soluções & Sistemas Corporativos",
+                tech1_val: "SAP, Sienge ERP, Microsoft 365, Microsoft Graph API, Entra ID, Intune, Active Directory, SharePoint.",
+                tech2_cat: "Engenharia de Software",
+                tech2_val: "TypeScript, React, Next.js, Node.js, Python, PostgreSQL, Express, Fastify, Prisma.",
+                tech3_cat: "Nuvem, Dados & Segurança",
+                tech3_val: "Google Cloud, Supabase, Firebase, Redis, Docker, PostgreSQL RLS, criptografia AES-256-GCM.",
+                tech4_cat: "IA Aplicada & Sistemas Cognitivos",
+                tech4_val: "Google Gemini API, saídas estruturadas, recuperação semântica, embeddings vetoriais, grafos de conhecimento, memória episódica, Three.js/React Three Fiber, shaders WebGL.",
+                eng_h2: "ABORDAGEM DE ENGENHARIA",
+                eng_sub: "A equipe de filmagem vai embora. A engenharia fica.",
+                eng_intro: "Eu projeto e construo sistemas que combinam IA com lógica determinística, segurança e restrições operacionais reais.",
+                eng_cat1: "Arquitetura e APIs",
+                eng_val1: "Eu estruturo aplicações em torno de limites de serviço claros, transições de estado validadas e contratos tipados de forma segura. Minha stack de backend inclui Node.js, Express, Fastify, rotas de API Next.js, PostgreSQL e Supabase.",
+                eng_cat2: "Dados e Segurança",
+                eng_val2: "Eu uso migrações de banco de dados versionadas, PostgreSQL Row Level Security com isolamento de tenant com escopo de sessão, criptografia AES-256-GCM para documentos sensíveis, workers automatizados de conformidade LGPD, manipulação segura de sessão e validação estruturada de requisições com Zod.",
+                eng_cat3: "Integrações e IA",
+                eng_val3: "Eu construo sistemas de IA usando um padrão confinado: modelo probabilístico &rarr; saída estruturada &rarr; validação determinística &rarr; regras de fallback &rarr; ação na aplicação. A IA sugere, mas nunca age sem supervisão. Também construo integrações baseadas em webhooks para sistemas corporativos (SAP, Microsoft Graph, ERP).",
+                eng_caption: "[Michael não foi consultado sobre a arquitetura.]",
+                contact_h2: "Contato com o Departamento de TI",
+                contact_sub: "Nenhum chamado necessário.",
+                btn_github: "GitHub",
+                btn_linkedin: "LinkedIn",
+                footer_text: "&copy; 2026 André Rogério",
+                note: "Revisado por Dwight Schrute"
+            }
+        };
+
+        let currentLang = localStorage.getItem('pref-lang') || 'en';
+
+        function applyLanguage(lang) {
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+            
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (key === 'title') {
+                        document.title = translations[lang][key];
+                    } else {
+                        el.innerHTML = translations[lang][key];
+                    }
+                }
+            });
+
+            const btn = document.getElementById('lang-toggle');
+            if (lang === 'en') {
+                btn.textContent = 'PT';
+            } else {
+                btn.textContent = 'EN';
+            }
+        }
+
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'pt' : 'en';
+            localStorage.setItem('pref-lang', currentLang);
+            applyLanguage(currentLang);
+        });
+
+        // Initialize on load
+        applyLanguage(currentLang);
+    </script>
 </body>
 </html>
