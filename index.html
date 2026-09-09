@@ -118,10 +118,22 @@
                     <div class="project-card">
                         <div class="card-inner">
                             <h4>INTERNAL TICKETING SYSTEM</h4>
+                            
+                            <!-- Interactive Visual Showcase -->
+                            <div class="project-visual-preview">
+                                <img src="assets/cbi_fleet_radar.png" alt="CBI Ops Center - Fleet Radar & Telemetry" class="preview-hero-img" id="cbi-preview-img" onclick="window.open(this.src, '_blank')">
+                                <div class="preview-thumbs">
+                                    <img src="assets/cbi_fleet_radar.png" alt="Fleet Radar" class="thumb-mini active" onclick="switchCbiPreview(this.src, this)" title="Fleet Radar & Intune Telemetry">
+                                    <img src="assets/cbi_rag_performance.png" alt="RAG Performance" class="thumb-mini" onclick="switchCbiPreview(this.src, this)" title="RAG Engine & Gemini Cost Metrics">
+                                    <img src="assets/cbi_ticket_deflection.png" alt="Smart Ticket Deflection" class="thumb-mini" onclick="switchCbiPreview(this.src, this)" title="Smart Ticket Prevention (Checklist)">
+                                    <img src="assets/cbi_isa_demo.gif" alt="Isa Chat Live Demo" class="thumb-mini" onclick="switchCbiPreview(this.src, this)" title="Isa AI Assistant Live Conversation">
+                                </div>
+                            </div>
+
                             <p class="desc" data-i18n="proj2_desc">An AI-powered ITSM platform with intelligent ticket deflection, structured intake, and deterministic AI validation. Uses a confined AI pattern: probabilistic model &rarr; structured output (typed JSON schema) &rarr; deterministic validation &rarr; fallback rules &rarr; application action. Integrates Microsoft Graph API for Intune device compliance telemetry.</p>
                             <div class="tech-stack">Next.js 16, TypeScript, Supabase, Socket.io, Redis, Gemini 2.5 Flash, Microsoft Graph API, Zod</div>
                             <div class="status" data-i18n="proj2_status">Status: Production Deployment - September 2026<br><span style="color: var(--c-charcoal); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj2_status_2">Initial deployment: 22 users</span></div>
-                            <div class="confidential-notice" data-i18n="confidential_notice_2">🔒 UI Dashboards & Demos available for presentation during live interviews (NDA protected).</div>
+                            <div class="confidential-notice" data-i18n="confidential_notice_2">🔒 UI Dashboards & Demos sanitized for public showcase (LGPD/Confidentiality protected).</div>
                             <div class="links">
                                 <a href="https://github.com/TheyDreez/ticketing-system-portfolio" target="_blank" class="btn btn-outline" data-i18n="repo_link_2">Repository</a>
                             </div>
@@ -482,6 +494,21 @@
 
         // Initialize on load
         applyLanguage(currentLang);
+
+        // CBI Preview gallery switch
+        window.switchCbiPreview = function(src, el) {
+            const hero = document.getElementById('cbi-preview-img');
+            if (hero) {
+                hero.style.opacity = '0.5';
+                setTimeout(() => {
+                    hero.src = src;
+                    hero.style.opacity = '1';
+                }, 100);
+            }
+            const thumbs = document.querySelectorAll('.thumb-mini');
+            thumbs.forEach(t => t.classList.remove('active'));
+            if (el) el.classList.add('active');
+        };
     </script>
 </body>
 </html>
