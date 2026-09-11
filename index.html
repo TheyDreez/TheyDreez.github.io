@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="André Rogério - Software Engineer | Solutions Architecture, Applied AI & Research">
     <title data-i18n="title">André Rogério | Software Engineer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260911c">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -166,7 +166,7 @@
                             
                             <!-- Interactive Visual Showcase -->
                             <div class="project-visual-preview">
-                                <div class="preview-hero-wrapper" onclick="openLightbox(currentGalleryIndex)" title="Click to expand / Clique para ampliar">
+                                <div class="preview-hero-wrapper" onclick="window.openLightbox()" title="Click to expand / Clique para ampliar">
                                     <img src="assets/cbi_fleet_radar.png" alt="Enterprise ITSM Ops Center - Fleet Radar & Telemetry" class="preview-hero-img" id="cbi-preview-img">
                                     <div class="expand-badge">
                                         <span>⛶</span>
@@ -174,14 +174,14 @@
                                     </div>
                                 </div>
                                 <div class="preview-thumbs">
-                                    <img src="assets/cbi_fleet_radar.png" alt="Fleet Radar" class="thumb-mini active" onclick="selectGalleryItem(0)" title="Fleet Radar & Intune Telemetry">
-                                    <img src="assets/cbi_dashboard_main.png" alt="Ops Center Dashboard" class="thumb-mini" onclick="selectGalleryItem(1)" title="Enterprise ITSM Ops Center - Central Dashboard">
-                                    <img src="assets/cbi_rag_performance.png" alt="RAG Performance" class="thumb-mini" onclick="selectGalleryItem(2)" title="RAG Engine & Gemini Cost Metrics">
-                                    <img src="assets/cbi_ticket_deflection.png" alt="Smart Ticket Deflection" class="thumb-mini" onclick="selectGalleryItem(3)" title="Smart Ticket Prevention (Checklist)">
-                                    <img src="assets/cbi_device_intelligence.png" alt="Device Intelligence" class="thumb-mini" onclick="selectGalleryItem(4)" title="Device Intelligence & Hardware Health">
-                                    <img src="assets/cbi_tickets_list.png" alt="Tickets List" class="thumb-mini" onclick="selectGalleryItem(5)" title="Ticket Queue & SLA Management">
-                                    <img src="assets/cbi_m365_overview.png" alt="M365 Cloud Architecture" class="thumb-mini" onclick="selectGalleryItem(6)" title="Microsoft 365 Tenant & License Telemetry">
-                                    <img src="assets/cbi_isa_demo.gif" alt="Isa Chat Live Demo" class="thumb-mini" onclick="selectGalleryItem(7)" title="Isa AI Assistant Live Conversation">
+                                    <img src="assets/cbi_fleet_radar.png" alt="Fleet Radar" class="thumb-mini active" onclick="window.selectGalleryItem(0)" title="Fleet Radar & Intune Telemetry">
+                                    <img src="assets/cbi_dashboard_main.png" alt="Ops Center Dashboard" class="thumb-mini" onclick="window.selectGalleryItem(1)" title="Enterprise ITSM Ops Center - Central Dashboard">
+                                    <img src="assets/cbi_rag_performance.png" alt="RAG Performance" class="thumb-mini" onclick="window.selectGalleryItem(2)" title="RAG Engine & Gemini Cost Metrics">
+                                    <img src="assets/cbi_ticket_deflection.png" alt="Smart Ticket Deflection" class="thumb-mini" onclick="window.selectGalleryItem(3)" title="Smart Ticket Prevention (Checklist)">
+                                    <img src="assets/cbi_device_intelligence.png" alt="Device Intelligence" class="thumb-mini" onclick="window.selectGalleryItem(4)" title="Device Intelligence & Hardware Health">
+                                    <img src="assets/cbi_tickets_list.png" alt="Tickets List" class="thumb-mini" onclick="window.selectGalleryItem(5)" title="Ticket Queue & SLA Management">
+                                    <img src="assets/cbi_m365_overview.png" alt="M365 Cloud Architecture" class="thumb-mini" onclick="window.selectGalleryItem(6)" title="Microsoft 365 Tenant & License Telemetry">
+                                    <img src="assets/cbi_isa_demo.gif" alt="Isa Chat Live Demo" class="thumb-mini" onclick="window.selectGalleryItem(7)" title="Isa AI Assistant Live Conversation">
                                 </div>
                             </div>
 
@@ -547,45 +547,7 @@
             }
         };
 
-        let currentLang = localStorage.getItem('pref-lang') || 'en';
-
-        function applyLanguage(lang) {
-            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-            
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    if (key === 'title') {
-                        document.title = translations[lang][key];
-                    } else {
-                        el.innerHTML = translations[lang][key];
-                    }
-                }
-            });
-
-            const btn = document.getElementById('lang-toggle');
-            if (lang === 'en') {
-                btn.textContent = 'PT';
-            } else {
-                btn.textContent = 'EN';
-            }
-
-            if (typeof updateLightboxCaptionLang === 'function') {
-                updateLightboxCaptionLang();
-            }
-        }
-
-        document.getElementById('lang-toggle').addEventListener('click', () => {
-            currentLang = currentLang === 'en' ? 'pt' : 'en';
-            localStorage.setItem('pref-lang', currentLang);
-            applyLanguage(currentLang);
-        });
-
-        // Initialize on load
-        applyLanguage(currentLang);
-
-        // Enterprise ITSM Ops Center Gallery & Lightbox Controller
+        // Enterprise ITSM Ops Center Gallery Data
         const itsmGallery = [
             {
                 src: 'assets/cbi_fleet_radar.png',
@@ -632,22 +594,15 @@
         let currentGalleryIndex = 0;
         let isSingleImageMode = false;
         let singleImageTitle = '';
+        let currentLang = localStorage.getItem('pref-lang') || 'en';
 
-        window.selectGalleryItem = function(index) {
-            if (index === currentGalleryIndex) {
-                window.openLightbox(index);
-                return;
-            }
+        function updateGalleryHero(index) {
             currentGalleryIndex = index;
             const hero = document.getElementById('cbi-preview-img');
             const item = itsmGallery[index];
             if (hero && item) {
-                hero.style.opacity = '0.4';
-                setTimeout(() => {
-                    hero.src = item.src;
-                    hero.alt = currentLang === 'pt' ? item.titlePt : item.titleEn;
-                    hero.style.opacity = '1';
-                }, 100);
+                hero.src = item.src;
+                hero.alt = currentLang === 'pt' ? item.titlePt : item.titleEn;
             }
             const thumbs = document.querySelectorAll('.thumb-mini');
             thumbs.forEach((t, i) => {
@@ -657,6 +612,11 @@
                     t.classList.remove('active');
                 }
             });
+        }
+
+        window.selectGalleryItem = function(index) {
+            updateGalleryHero(index);
+            window.openLightbox(index);
         };
 
         // Backward compatibility
@@ -668,7 +628,7 @@
         };
 
         window.openLightbox = function(index) {
-            if (index === undefined) index = currentGalleryIndex;
+            if (index === undefined || index === null) index = currentGalleryIndex;
             currentGalleryIndex = index;
             isSingleImageMode = false;
             
@@ -713,8 +673,10 @@
         };
 
         window.closeLightbox = function(e) {
-            if (e && e.target && e.target.closest && e.target.closest('.lightbox-dialog') && !e.target.classList.contains('lightbox-close-btn')) {
-                return;
+            if (e && e.target) {
+                if (e.target.closest('.lightbox-img-container') || e.target.closest('.lightbox-nav-btn')) {
+                    return;
+                }
             }
             const modal = document.getElementById('lightbox-modal');
             if (modal) {
@@ -750,17 +712,51 @@
                     img.style.opacity = '1';
                 }, 80);
             }
-            window.selectGalleryItem(currentGalleryIndex);
+            updateGalleryHero(currentGalleryIndex);
         }
 
-        function updateLightboxCaptionLang() {
+        function applyLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+            
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (key === 'title') {
+                        document.title = translations[lang][key];
+                    } else {
+                        el.innerHTML = translations[lang][key];
+                    }
+                }
+            });
+
+            const btn = document.getElementById('lang-toggle');
+            if (btn) {
+                btn.textContent = lang === 'en' ? 'PT' : 'EN';
+            }
+
+            const hero = document.getElementById('cbi-preview-img');
+            if (hero && itsmGallery[currentGalleryIndex]) {
+                hero.alt = lang === 'pt' ? itsmGallery[currentGalleryIndex].titlePt : itsmGallery[currentGalleryIndex].titleEn;
+            }
+
             const caption = document.getElementById('lightbox-caption');
-            if (!caption) return;
-            if (!isSingleImageMode) {
-                const item = itsmGallery[currentGalleryIndex];
-                if (item) caption.textContent = currentLang === 'pt' ? item.titlePt : item.titleEn;
+            if (caption) {
+                if (!isSingleImageMode && itsmGallery[currentGalleryIndex]) {
+                    caption.textContent = lang === 'pt' ? itsmGallery[currentGalleryIndex].titlePt : itsmGallery[currentGalleryIndex].titleEn;
+                }
             }
         }
+
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'pt' : 'en';
+            localStorage.setItem('pref-lang', currentLang);
+            applyLanguage(currentLang);
+        });
+
+        // Initialize on load
+        applyLanguage(currentLang);
 
         // Keyboard navigation
         window.addEventListener('keydown', (e) => {
