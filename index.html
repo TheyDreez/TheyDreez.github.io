@@ -634,12 +634,21 @@
             }
             resize();
             window.addEventListener('resize', resize);
+            window.resizeHeroShader = resize;
 
             canvas.addEventListener('mousemove', (e) => {
                 const rect = canvas.getBoundingClientRect();
                 targetMouseX = (e.clientX - rect.left) / rect.width;
                 targetMouseY = (e.clientY - rect.top) / rect.height;
             });
+
+            canvas.addEventListener('touchmove', (e) => {
+                if (e.touches.length > 0) {
+                    const rect = canvas.getBoundingClientRect();
+                    targetMouseX = (e.touches[0].clientX - rect.left) / rect.width;
+                    targetMouseY = (e.touches[0].clientY - rect.top) / rect.height;
+                }
+            }, { passive: true });
 
             const vs = `
                 attribute vec2 position;
