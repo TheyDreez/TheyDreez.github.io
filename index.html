@@ -166,12 +166,22 @@
                             
                             <!-- Interactive Visual Showcase -->
                             <div class="project-visual-preview">
-                                <img src="assets/cbi_fleet_radar.png" alt="Enterprise ITSM Ops Center - Fleet Radar & Telemetry" class="preview-hero-img" id="cbi-preview-img" onclick="window.open(this.src, '_blank')">
+                                <div class="preview-hero-wrapper" onclick="openLightbox(currentGalleryIndex)" title="Click to expand / Clique para ampliar">
+                                    <img src="assets/cbi_fleet_radar.png" alt="Enterprise ITSM Ops Center - Fleet Radar & Telemetry" class="preview-hero-img" id="cbi-preview-img">
+                                    <div class="expand-badge">
+                                        <span>⛶</span>
+                                        <span data-i18n="expand_click">Click to expand</span>
+                                    </div>
+                                </div>
                                 <div class="preview-thumbs">
-                                    <img src="assets/cbi_fleet_radar.png" alt="Fleet Radar" class="thumb-mini active" onclick="switchCbiPreview(this.src, this)" title="Fleet Radar & Intune Telemetry">
-                                    <img src="assets/cbi_rag_performance.png" alt="RAG Performance" class="thumb-mini" onclick="switchCbiPreview(this.src, this)" title="RAG Engine & Gemini Cost Metrics">
-                                    <img src="assets/cbi_ticket_deflection.png" alt="Smart Ticket Deflection" class="thumb-mini" onclick="switchCbiPreview(this.src, this)" title="Smart Ticket Prevention (Checklist)">
-                                    <img src="assets/cbi_isa_demo.gif" alt="Isa Chat Live Demo" class="thumb-mini" onclick="switchCbiPreview(this.src, this)" title="Isa AI Assistant Live Conversation">
+                                    <img src="assets/cbi_fleet_radar.png" alt="Fleet Radar" class="thumb-mini active" onclick="selectGalleryItem(0)" title="Fleet Radar & Intune Telemetry">
+                                    <img src="assets/cbi_dashboard_main.png" alt="Ops Center Dashboard" class="thumb-mini" onclick="selectGalleryItem(1)" title="Enterprise ITSM Ops Center - Central Dashboard">
+                                    <img src="assets/cbi_rag_performance.png" alt="RAG Performance" class="thumb-mini" onclick="selectGalleryItem(2)" title="RAG Engine & Gemini Cost Metrics">
+                                    <img src="assets/cbi_ticket_deflection.png" alt="Smart Ticket Deflection" class="thumb-mini" onclick="selectGalleryItem(3)" title="Smart Ticket Prevention (Checklist)">
+                                    <img src="assets/cbi_device_intelligence.png" alt="Device Intelligence" class="thumb-mini" onclick="selectGalleryItem(4)" title="Device Intelligence & Hardware Health">
+                                    <img src="assets/cbi_tickets_list.png" alt="Tickets List" class="thumb-mini" onclick="selectGalleryItem(5)" title="Ticket Queue & SLA Management">
+                                    <img src="assets/cbi_m365_overview.png" alt="M365 Cloud Architecture" class="thumb-mini" onclick="selectGalleryItem(6)" title="Microsoft 365 Tenant & License Telemetry">
+                                    <img src="assets/cbi_isa_demo.gif" alt="Isa Chat Live Demo" class="thumb-mini" onclick="selectGalleryItem(7)" title="Isa AI Assistant Live Conversation">
                                 </div>
                             </div>
 
@@ -231,7 +241,7 @@
                         <div class="file-tab" data-i18n="prof_profile">PROFESSIONAL PROFILE</div>
                         <div class="file-content">
                             <div class="profile-header">
-                                <img src="assets/user_photo_1.png" alt="André Rogério" class="profile-photo">
+                                <img src="assets/user_photo_1.png" alt="André Rogério" class="profile-photo" onclick="openSingleImageLightbox(this.src, 'André Rogério - Employee File')" style="cursor: zoom-in;" title="Click to expand / Clique para ampliar">
                                 <div class="file-details">
                                     <div class="file-row">
                                         <span class="file-label" data-i18n="lbl_name">Name:</span>
@@ -316,7 +326,7 @@
                         </div>
                     </div>
                     <div class="eng-visual">
-                        <div class="camera-frame">
+                        <div class="camera-frame" onclick="openSingleImageLightbox('assets/whiteboard.jpg', currentLang === 'pt' ? 'Esboço de Arquitetura Conceitual' : 'Conceptual Architecture Whiteboard Sketch')" style="cursor: zoom-in;" title="Click to expand / Clique para ampliar">
                             <img src="assets/whiteboard.jpg" alt="Conceptual architecture whiteboard sketch showing Frontend, Backend, Database, and Integrations">
                             <div class="doc-caption" data-i18n="eng_caption">[Michael was not consulted on the architecture.]</div>
                         </div>
@@ -329,8 +339,7 @@
         <section id="contact" class="contact-section">
             <div class="container text-center">
                 <h2 data-i18n="contact_h2">Contact the IT Department</h2>
-                <p class="subtitle" data-i18n="contact_sub">No ticket required.</p>
-                
+                <p class="section-subtitle" data-i18n="contact_sub">No ticket required.</p>
                 <div class="contact-links">
                     <a href="https://github.com/TheyDreez" target="_blank" class="btn btn-primary" data-i18n="btn_github">GitHub</a>
                     <a href="https://www.linkedin.com/in/andré-silvaf" target="_blank" class="btn btn-outline" data-i18n="btn_linkedin">LinkedIn</a>
@@ -339,6 +348,22 @@
         </section>
 
     </main>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox(event)">
+        <div class="lightbox-dialog" onclick="event.stopPropagation()">
+            <button class="lightbox-close-btn" onclick="closeLightbox()" title="Close">&times;</button>
+            <button class="lightbox-nav-btn lightbox-prev" onclick="prevLightboxImage()" title="Previous">&#10094;</button>
+            <button class="lightbox-nav-btn lightbox-next" onclick="nextLightboxImage()" title="Next">&#10095;</button>
+            <div class="lightbox-img-container">
+                <img id="lightbox-img" src="" alt="Screenshot">
+            </div>
+            <div class="lightbox-footer">
+                <div id="lightbox-caption" class="lightbox-caption"></div>
+                <div id="lightbox-counter" class="lightbox-counter"></div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container footer-content">
@@ -431,7 +456,8 @@
                 note: "Reviewed by Dwight Schrute",
                 lower_third_role: "Software Engineer &middot; Solutions Architecture, IT Dept",
                 dundie_title: "2026 DUNDIE AWARD NOMINEE",
-                dundie_desc: "\"Most Likely to Automate His Own Job with AI\" &middot; Scranton Corporate IT Division"
+                dundie_desc: "\"Most Likely to Automate His Own Job with AI\" &middot; Scranton Corporate IT Division",
+                expand_click: "Click to expand"
             },
             pt: {
                 title: "André Rogério | Engenheiro de Software",
@@ -516,8 +542,8 @@
                 note: "Revisado por Dwight Schrute",
                 lower_third_role: "Engenheiro de Software &middot; Arquitetura de Soluções, Depto. de TI",
                 dundie_title: "INDICADO AO PRÊMIO DUNDIE 2026",
-                dundie_desc: "\"Mais Provável de Automatizar o Próprio Trabalho com IA\" &middot; Divisão de TI Corporativa"
-            }
+                dundie_desc: "\"Mais Provável de Automatizar o Próprio Trabalho com IA\" &middot; Divisão de TI Corporativa",
+                expand_click: "Clique para ampliar"
             }
         };
 
@@ -544,6 +570,10 @@
             } else {
                 btn.textContent = 'EN';
             }
+
+            if (typeof updateLightboxCaptionLang === 'function') {
+                updateLightboxCaptionLang();
+            }
         }
 
         document.getElementById('lang-toggle').addEventListener('click', () => {
@@ -555,20 +585,213 @@
         // Initialize on load
         applyLanguage(currentLang);
 
-        // CBI Preview gallery switch
-        window.switchCbiPreview = function(src, el) {
+        // Enterprise ITSM Ops Center Gallery & Lightbox Controller
+        const itsmGallery = [
+            {
+                src: 'assets/cbi_fleet_radar.png',
+                titleEn: 'Fleet Radar & Intune Telemetry',
+                titlePt: 'Fleet Radar & Telemetria do Intune'
+            },
+            {
+                src: 'assets/cbi_dashboard_main.png',
+                titleEn: 'Enterprise ITSM Ops Center - Central Dashboard',
+                titlePt: 'Central de Operações ITSM - Painel Principal'
+            },
+            {
+                src: 'assets/cbi_rag_performance.png',
+                titleEn: 'RAG Engine Performance & Gemini Cost Metrics',
+                titlePt: 'Performance do Motor RAG & Métricas de Custo Gemini'
+            },
+            {
+                src: 'assets/cbi_ticket_deflection.png',
+                titleEn: 'Smart Ticket Deflection & Resolution Checklist',
+                titlePt: 'Deflexão Inteligente de Chamados & Checklist de Resolução'
+            },
+            {
+                src: 'assets/cbi_device_intelligence.png',
+                titleEn: 'Device Intelligence & Hardware Health',
+                titlePt: 'Inteligência de Dispositivos & Saúde de Hardware'
+            },
+            {
+                src: 'assets/cbi_tickets_list.png',
+                titleEn: 'Ticket Queue & Service Level Agreement (SLA)',
+                titlePt: 'Fila de Chamados & Gestão de SLA'
+            },
+            {
+                src: 'assets/cbi_m365_overview.png',
+                titleEn: 'Microsoft 365 Tenant & License Architecture',
+                titlePt: 'Arquitetura de Licenças & Tenant Microsoft 365'
+            },
+            {
+                src: 'assets/cbi_isa_demo.gif',
+                titleEn: 'Isa AI Assistant Live Conversation Demo',
+                titlePt: 'Assistente Isa AI - Demonstração de Conversa ao Vivo'
+            }
+        ];
+
+        let currentGalleryIndex = 0;
+        let isSingleImageMode = false;
+        let singleImageTitle = '';
+
+        window.selectGalleryItem = function(index) {
+            if (index === currentGalleryIndex) {
+                window.openLightbox(index);
+                return;
+            }
+            currentGalleryIndex = index;
             const hero = document.getElementById('cbi-preview-img');
-            if (hero) {
-                hero.style.opacity = '0.5';
+            const item = itsmGallery[index];
+            if (hero && item) {
+                hero.style.opacity = '0.4';
                 setTimeout(() => {
-                    hero.src = src;
+                    hero.src = item.src;
+                    hero.alt = currentLang === 'pt' ? item.titlePt : item.titleEn;
                     hero.style.opacity = '1';
                 }, 100);
             }
             const thumbs = document.querySelectorAll('.thumb-mini');
-            thumbs.forEach(t => t.classList.remove('active'));
-            if (el) el.classList.add('active');
+            thumbs.forEach((t, i) => {
+                if (i === index) {
+                    t.classList.add('active');
+                } else {
+                    t.classList.remove('active');
+                }
+            });
         };
+
+        // Backward compatibility
+        window.switchCbiPreview = function(src, el) {
+            const index = itsmGallery.findIndex(item => item.src === src);
+            if (index !== -1) {
+                window.selectGalleryItem(index);
+            }
+        };
+
+        window.openLightbox = function(index) {
+            if (index === undefined) index = currentGalleryIndex;
+            currentGalleryIndex = index;
+            isSingleImageMode = false;
+            
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            const counter = document.getElementById('lightbox-counter');
+            const prevBtn = document.querySelector('.lightbox-prev');
+            const nextBtn = document.querySelector('.lightbox-next');
+            const item = itsmGallery[currentGalleryIndex];
+
+            if (modal && img && item) {
+                img.src = item.src;
+                if (caption) caption.textContent = currentLang === 'pt' ? item.titlePt : item.titleEn;
+                if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${itsmGallery.length}`;
+                if (prevBtn) prevBtn.style.display = 'flex';
+                if (nextBtn) nextBtn.style.display = 'flex';
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        };
+
+        window.openSingleImageLightbox = function(src, title) {
+            isSingleImageMode = true;
+            singleImageTitle = title || '';
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            const counter = document.getElementById('lightbox-counter');
+            const prevBtn = document.querySelector('.lightbox-prev');
+            const nextBtn = document.querySelector('.lightbox-next');
+
+            if (modal && img) {
+                img.src = src;
+                if (caption) caption.textContent = singleImageTitle;
+                if (counter) counter.textContent = '';
+                if (prevBtn) prevBtn.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        };
+
+        window.closeLightbox = function(e) {
+            if (e && e.target && e.target.closest && e.target.closest('.lightbox-dialog') && !e.target.classList.contains('lightbox-close-btn')) {
+                return;
+            }
+            const modal = document.getElementById('lightbox-modal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        };
+
+        window.nextLightboxImage = function() {
+            if (isSingleImageMode) return;
+            currentGalleryIndex = (currentGalleryIndex + 1) % itsmGallery.length;
+            updateLightboxContent();
+        };
+
+        window.prevLightboxImage = function() {
+            if (isSingleImageMode) return;
+            currentGalleryIndex = (currentGalleryIndex - 1 + itsmGallery.length) % itsmGallery.length;
+            updateLightboxContent();
+        };
+
+        function updateLightboxContent() {
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            const counter = document.getElementById('lightbox-counter');
+            const item = itsmGallery[currentGalleryIndex];
+
+            if (img && item) {
+                img.style.opacity = '0.35';
+                setTimeout(() => {
+                    img.src = item.src;
+                    if (caption) caption.textContent = currentLang === 'pt' ? item.titlePt : item.titleEn;
+                    if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${itsmGallery.length}`;
+                    img.style.opacity = '1';
+                }, 80);
+            }
+            window.selectGalleryItem(currentGalleryIndex);
+        }
+
+        function updateLightboxCaptionLang() {
+            const caption = document.getElementById('lightbox-caption');
+            if (!caption) return;
+            if (!isSingleImageMode) {
+                const item = itsmGallery[currentGalleryIndex];
+                if (item) caption.textContent = currentLang === 'pt' ? item.titlePt : item.titleEn;
+            }
+        }
+
+        // Keyboard navigation
+        window.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('lightbox-modal');
+            if (!modal || !modal.classList.contains('active')) return;
+            if (e.key === 'Escape') window.closeLightbox();
+            if (e.key === 'ArrowRight') window.nextLightboxImage();
+            if (e.key === 'ArrowLeft') window.prevLightboxImage();
+        });
+
+        // Touch swipe support in lightbox
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const modalEl = document.getElementById('lightbox-modal');
+        if (modalEl) {
+            modalEl.addEventListener('touchstart', (e) => {
+                if (e.changedTouches && e.changedTouches.length > 0) {
+                    touchStartX = e.changedTouches[0].screenX;
+                }
+            }, { passive: true });
+            modalEl.addEventListener('touchend', (e) => {
+                if (e.changedTouches && e.changedTouches.length > 0) {
+                    touchEndX = e.changedTouches[0].screenX;
+                    const diff = touchEndX - touchStartX;
+                    if (Math.abs(diff) > 40) {
+                        if (diff < 0) window.nextLightboxImage();
+                        else window.prevLightboxImage();
+                    }
+                }
+            }, { passive: true });
+        }
 
         // Mockumentary Timecode Ticker
         let frameCount = 12;
