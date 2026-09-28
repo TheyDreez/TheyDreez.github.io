@@ -171,21 +171,35 @@ nav a:hover {
     text-decoration: none;
 }
 .lang-btn {
-    padding: 4px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 14px;
     font-family: var(--font-mono);
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     font-weight: 700;
-    border: 1px solid var(--c-border-strong);
-    background: var(--c-paper-dark);
-    color: var(--c-ink);
+    letter-spacing: 0.3px;
+    border: 1.5px solid var(--c-dunder-blue);
+    background: #ffffff;
+    color: var(--c-dunder-blue);
     cursor: pointer;
-    border-radius: 2px;
-    transition: all 0.2s ease;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.16);
+    transition: all 0.25s ease;
     white-space: nowrap;
 }
 .lang-btn:hover {
-    background-color: var(--c-ink);
-    color: var(--c-paper);
+    background-color: var(--c-dunder-blue);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.32);
+    transform: translateY(-1px);
+}
+.lang-btn .lang-globe {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+.lang-text-short {
+    display: none;
 }
 
 /* Responsive Navbar for Mobile */
@@ -219,8 +233,14 @@ nav a:hover {
         padding: 3px 2px;
     }
     .lang-btn {
-        padding: 3px 8px;
-        font-size: 0.72rem;
+        padding: 4px 10px;
+        font-size: 0.74rem;
+    }
+    .lang-text-full {
+        display: none;
+    }
+    .lang-text-short {
+        display: inline;
     }
 }
 @media (max-width: 380px) {
@@ -269,11 +289,26 @@ nav a:hover {
     background-color: var(--c-paper-dark); 
     text-decoration: none; 
 }
+.btn-icon {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 0.95em;
+    vertical-align: -1px;
+}
+.btn-resume-pt {
+    border-color: #059669;
+    color: #047857;
+}
+.btn-resume-pt:hover {
+    background-color: #059669;
+    color: #ffffff;
+    border-color: #059669;
+}
 
 /* Sections General */
 section { 
     padding: 60px 0; 
-    width: 100%;
+    width: 100%; 
     box-sizing: border-box;
 }
 .section-header { 
@@ -323,7 +358,9 @@ section {
 }
 .hero-actions {
     display: flex;
-    gap: 14px;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .hero-visual {
     flex: 0.9;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="André Rogério - Software Engineer | Solutions Architecture, Applied AI & Research">
     <title data-i18n="title">André Rogério | Software Engineer</title>
-    <link rel="stylesheet" href="style.css?v=20260911c">
+    <link rel="stylesheet" href="style.css?v=20260928a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -21,7 +21,11 @@
                     <li><a href="#engineering" data-i18n="nav_engineering">ENGINEERING</a></li>
                     <li><a href="#contact" data-i18n="nav_contact">CONTACT</a></li>
                 </ul>
-                <button id="lang-toggle" class="btn btn-outline lang-btn">PT</button>
+                <button id="lang-toggle" class="lang-btn" aria-label="Alterar idioma / Switch language" title="Traduzir para Português / Switch to English">
+                    <span class="lang-globe">🌐</span>
+                    <span class="lang-text-full" id="lang-btn-text">Traduzir para PT-BR</span>
+                    <span class="lang-text-short" id="lang-btn-text-short">PT-BR</span>
+                </button>
             </nav>
         </div>
     </header>
@@ -36,7 +40,12 @@
                     <p class="hero-desc" data-i18n="hero_desc">I build and research systems at the intersection of AI, software engineering, and real-world operations. I turn probabilistic models into reliable systems.</p>
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary" data-i18n="btn_projects">View Projects</a>
-                        <a href="assets/Andre_Rogerio_Resume.pdf" target="_blank" class="btn btn-outline" data-i18n="btn_resume">Download Résumé</a>
+                        <a href="assets/Andre_Rogerio_Resume_EN.pdf" target="_blank" class="btn btn-outline" id="btn-resume-en" title="English Résumé (PDF)">
+                            <span class="btn-icon">📄</span> <span data-i18n="btn_resume_en">Download Résumé (EN)</span>
+                        </a>
+                        <a href="assets/Andre_Rogerio_Curriculo_PT.pdf" target="_blank" class="btn btn-outline btn-resume-pt" id="btn-resume-pt" title="Currículo em Português (PDF)">
+                            <span class="btn-icon">📄</span> <span data-i18n="btn_resume_pt">Currículo (PT-BR)</span>
+                        </a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -382,7 +391,10 @@
                 nav_engineering: "ENGINEERING",
                 nav_contact: "CONTACT",
                 btn_projects: "View Projects",
-                btn_resume: "Download Résumé",
+                btn_resume_en: "Download Résumé (EN)",
+                btn_resume_pt: "Currículo (PT-BR)",
+                lang_toggle_full: "Traduzir para PT-BR",
+                lang_toggle_short: "PT-BR",
                 intro_p1: "I'm a Software Engineer working across solutions architecture, applied AI, enterprise systems, and research. My path into technology started early, experimenting with PHP and running a homemade Habbo Hotel private server as a kid. Since then, I've moved through corporate IT, infrastructure, enterprise applications, industrial technology, applied AI, and research.",
                 intro_p2: "What drives me is the intersection between real problems and reliable systems. I like understanding how things actually work, designing the architecture, building the system, and making sure it survives contact with reality.",
                 intro_p3: "Alongside my work in engineering, I also volunteered as an English teacher. That experience shaped how I approach technology: I genuinely enjoy communicating with people, explaining complex ideas clearly, and helping others solve problems.",
@@ -468,7 +480,10 @@
                 nav_engineering: "ENGENHARIA",
                 nav_contact: "CONTATO",
                 btn_projects: "Ver Projetos",
-                btn_resume: "Baixar Currículo",
+                btn_resume_en: "Download Résumé (EN)",
+                btn_resume_pt: "Baixar Currículo (PT-BR)",
+                lang_toggle_full: "Switch to English (EN)",
+                lang_toggle_short: "EN",
                 intro_p1: "Sou Engenheiro de Software atuando em arquitetura de soluções, IA aplicada, sistemas corporativos e pesquisa. Meu caminho na tecnologia começou cedo, experimentando com PHP e montando um servidor privado de Habbo Hotel quando criança. Desde então, passei por TI corporativo, infraestrutura, aplicações empresariais, tecnologia industrial, IA aplicada e pesquisa.",
                 intro_p2: "O que me motiva é a intersecção entre problemas reais e sistemas confiáveis. Gosto de entender como as coisas realmente funcionam, projetar a arquitetura, construir o sistema e garantir que ele sobreviva ao contato com a realidade.",
                 intro_p3: "Além do meu trabalho em engenharia, também fui professor voluntário de inglês. Essa experiência moldou a forma como eu abordo tecnologia: gosto genuinamente de me comunicar com pessoas, explicar ideias complexas de forma clara e ajudar outros a resolver problemas.",
@@ -594,7 +609,7 @@
         let currentGalleryIndex = 0;
         let isSingleImageMode = false;
         let singleImageTitle = '';
-        let currentLang = localStorage.getItem('pref-lang') || 'en';
+        let currentLang = localStorage.getItem('pref-lang-v2') || 'en';
 
         function updateGalleryHero(index) {
             currentGalleryIndex = index;
@@ -731,9 +746,13 @@
                 }
             });
 
-            const btn = document.getElementById('lang-toggle');
-            if (btn) {
-                btn.textContent = lang === 'en' ? 'PT' : 'EN';
+            const btnText = document.getElementById('lang-btn-text');
+            const btnTextShort = document.getElementById('lang-btn-text-short');
+            if (btnText && translations[lang] && translations[lang].lang_toggle_full) {
+                btnText.textContent = translations[lang].lang_toggle_full;
+            }
+            if (btnTextShort && translations[lang] && translations[lang].lang_toggle_short) {
+                btnTextShort.textContent = translations[lang].lang_toggle_short;
             }
 
             const hero = document.getElementById('cbi-preview-img');
@@ -751,11 +770,11 @@
 
         document.getElementById('lang-toggle').addEventListener('click', () => {
             currentLang = currentLang === 'en' ? 'pt' : 'en';
-            localStorage.setItem('pref-lang', currentLang);
+            localStorage.setItem('pref-lang-v2', currentLang);
             applyLanguage(currentLang);
         });
 
-        // Initialize on load
+        // Initialize on load - defaults to English
         applyLanguage(currentLang);
 
         // Keyboard navigation
