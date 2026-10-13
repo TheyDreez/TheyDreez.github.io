@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="André Rogério - Consultor em Desenvolvimento de Software | Applied AI &amp; Cloud">
     <title data-i18n="title">André Rogério | Consultor em Desenvolvimento de Software | Applied AI &amp; Cloud</title>
-    <link rel="stylesheet" href="style.css?v=20260928a">
+    <link rel="stylesheet" href="style.css?v=20261013a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -146,7 +146,81 @@
                 </div>
 
                 <div class="project-cards">
-                    <!-- Project 1 -->
+                    <!-- Project 1: Enterprise ITSM Ops Center -->
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="dossier-tab-header">
+                                <span class="dossier-code">📁 DOSSIER // ENTERPRISE-ITSM-OPS</span>
+                                <span class="stamp-badge" style="border-color: #10B981; color: #10B981;">PRODUCTION</span>
+                            </div>
+                            <h4>INTERNAL TICKETING SYSTEM</h4>
+                            
+                            <!-- Interactive Visual Showcase -->
+                            <div class="project-visual-preview">
+                                <div class="preview-hero-wrapper" onclick="window.openGalleryLightbox('itsm', 0)" title="Click to expand / Clique para ampliar">
+                                    <img src="assets/cbi_fleet_radar.png" alt="Enterprise ITSM Ops Center - Fleet Radar & Telemetry" class="preview-hero-img" id="cbi-preview-img">
+                                    <div class="expand-badge">
+                                        <span>⛶</span>
+                                        <span data-i18n="expand_click">Click to expand</span>
+                                    </div>
+                                </div>
+                                <div class="preview-thumbs">
+                                    <img src="assets/cbi_fleet_radar.png" alt="Fleet Radar" class="thumb-mini active" onclick="window.selectGalleryItemCustom('itsm', 0)" title="Fleet Radar & Intune Telemetry">
+                                    <img src="assets/cbi_dashboard_main.png" alt="Ops Center Dashboard" class="thumb-mini" onclick="window.selectGalleryItemCustom('itsm', 1)" title="Enterprise ITSM Ops Center - Central Dashboard">
+                                    <img src="assets/cbi_rag_performance.png" alt="RAG Performance" class="thumb-mini" onclick="window.selectGalleryItemCustom('itsm', 2)" title="RAG Engine & Gemini Cost Metrics">
+                                    <img src="assets/cbi_ticket_deflection.png" alt="Smart Ticket Deflection" class="thumb-mini" onclick="window.selectGalleryItemCustom('itsm', 3)" title="Smart Ticket Prevention (Checklist)">
+                                    <img src="assets/cbi_device_intelligence.png" alt="Device Intelligence" class="thumb-mini" onclick="window.selectGalleryItemCustom('itsm', 4)" title="Device Intelligence & Hardware Health">
+                                    <img src="assets/cbi_tickets_list.png" alt="Tickets List" class="thumb-mini" onclick="window.selectGalleryItemCustom('itsm', 5)" title="Ticket Queue & SLA Management">
+                                    <img src="assets/cbi_m365_overview.png" alt="M365 Cloud Architecture" class="thumb-mini" onclick="window.selectGalleryItemCustom('itsm', 6)" title="Microsoft 365 Tenant & License Telemetry">
+                                    <img src="assets/cbi_isa_demo.gif" alt="Isa Chat Live Demo" class="thumb-mini" onclick="window.selectGalleryItemCustom('itsm', 7)" title="Isa AI Assistant Live Conversation">
+                                </div>
+                            </div>
+
+                            <p class="desc" data-i18n="proj2_desc">An AI-powered ITSM platform with intelligent ticket deflection, structured intake, and deterministic AI validation. Uses a confined AI pattern: probabilistic model &rarr; structured output (typed JSON schema) &rarr; deterministic validation &rarr; fallback rules &rarr; application action. Integrates Microsoft Graph API for Intune device compliance telemetry.</p>
+                            <div class="tech-stack">Next.js 16, TypeScript, Supabase, Socket.io, Redis, Gemini 2.5 Flash, Microsoft Graph API, Zod</div>
+                            <div class="status" data-i18n="proj2_status">Status: Production Deployment - September 2026<br><span style="color: var(--c-ink-muted); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj2_status_2">Initial deployment: 22 users</span></div>
+                            <div class="confidential-notice" data-i18n="confidential_notice_2">🔒 UI Dashboards & Demos sanitized for public showcase (LGPD/Confidentiality protected).</div>
+                            <div class="links">
+                                <a href="https://github.com/TheyDreez/ticketing-system-portfolio" target="_blank" class="btn btn-outline" data-i18n="repo_link_2">Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Cribum / AuditRx -->
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="dossier-tab-header">
+                                <span class="dossier-code">📁 DOSSIER // CRIBUM-AUDITRX</span>
+                                <span class="stamp-badge" style="border-color: #ED1C24; color: #ED1C24;">AMD ROCm &middot; AI DEFENSE</span>
+                            </div>
+                            <h4>CRIBUM (AUDITRX)</h4>
+                            
+                            <!-- Interactive Visual Showcase -->
+                            <div class="project-visual-preview">
+                                <div class="preview-hero-wrapper" onclick="window.openGalleryLightbox('cribum', 0)" title="Click to expand / Clique para ampliar">
+                                    <img src="assets/cribum_audit_dashboard.png" alt="Cribum - Multimodal Prescription Inspection" class="preview-hero-img" id="cribum-preview-img">
+                                    <div class="expand-badge">
+                                        <span>⛶</span>
+                                        <span data-i18n="expand_click">Click to expand</span>
+                                    </div>
+                                </div>
+                                <div class="preview-thumbs thumbs-3">
+                                    <img src="assets/cribum_audit_dashboard.png" alt="Prescription Inspection" class="thumb-mini active" onclick="window.selectGalleryItemCustom('cribum', 0)" title="Multimodal Prescription Inspection & Confidence Bounding Boxes">
+                                    <img src="assets/cribum_graph_networkx.png" alt="Relational Fraud Graph" class="thumb-mini" onclick="window.selectGalleryItemCustom('cribum', 1)" title="Relational Fraud Multigraph & Anomaly Detection (NetworkX)">
+                                    <img src="assets/cribum_demo.gif" alt="Cribum Workflow Demo" class="thumb-mini" onclick="window.selectGalleryItemCustom('cribum', 2)" title="Multi-Agent Audit & Graph Investigation Walkthrough">
+                                </div>
+                            </div>
+
+                            <p class="desc" data-i18n="proj_cribum_desc">A local, privacy-first multi-agent medical claim and prescription audit system built for the AMD Developer Hackathon (Health Track). Combines Open VLMs (Qwen2-VL via vLLM on AMD ROCm) with uncertainty-aware multi-hypothesis reading, clinical LASA safety databases, and NetworkX relational multigraph anomaly detection to expose systemic fraud rings.</p>
+                            <div class="tech-stack">Python, FastAPI, React 19, PyTorch, AMD ROCm, vLLM, NetworkX, TypeScript, TailwindCSS</div>
+                            <div class="status" data-i18n="proj_cribum_status">Status: Completed &middot; AMD Developer Hackathon ACT III<br><span style="color: var(--c-ink-muted); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj_cribum_status_2">Health &amp; Wellbeing Track &middot; Team Inédito Viável</span></div>
+                            <div class="links">
+                                <a href="https://github.com/TheyDreez/cribum" target="_blank" class="btn btn-outline" data-i18n="repo_link">Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Onboarding OS -->
                     <div class="project-card">
                         <div class="card-inner">
                             <div class="dossier-tab-header">
@@ -164,47 +238,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <div class="dossier-tab-header">
-                                <span class="dossier-code">📁 DOSSIER // ENTERPRISE-ITSM-OPS</span>
-                                <span class="stamp-badge" style="border-color: #10B981; color: #10B981;">PRODUCTION</span>
-                            </div>
-                            <h4>INTERNAL TICKETING SYSTEM</h4>
-                            
-                            <!-- Interactive Visual Showcase -->
-                            <div class="project-visual-preview">
-                                <div class="preview-hero-wrapper" onclick="window.openLightbox()" title="Click to expand / Clique para ampliar">
-                                    <img src="assets/cbi_fleet_radar.png" alt="Enterprise ITSM Ops Center - Fleet Radar & Telemetry" class="preview-hero-img" id="cbi-preview-img">
-                                    <div class="expand-badge">
-                                        <span>⛶</span>
-                                        <span data-i18n="expand_click">Click to expand</span>
-                                    </div>
-                                </div>
-                                <div class="preview-thumbs">
-                                    <img src="assets/cbi_fleet_radar.png" alt="Fleet Radar" class="thumb-mini active" onclick="window.selectGalleryItem(0)" title="Fleet Radar & Intune Telemetry">
-                                    <img src="assets/cbi_dashboard_main.png" alt="Ops Center Dashboard" class="thumb-mini" onclick="window.selectGalleryItem(1)" title="Enterprise ITSM Ops Center - Central Dashboard">
-                                    <img src="assets/cbi_rag_performance.png" alt="RAG Performance" class="thumb-mini" onclick="window.selectGalleryItem(2)" title="RAG Engine & Gemini Cost Metrics">
-                                    <img src="assets/cbi_ticket_deflection.png" alt="Smart Ticket Deflection" class="thumb-mini" onclick="window.selectGalleryItem(3)" title="Smart Ticket Prevention (Checklist)">
-                                    <img src="assets/cbi_device_intelligence.png" alt="Device Intelligence" class="thumb-mini" onclick="window.selectGalleryItem(4)" title="Device Intelligence & Hardware Health">
-                                    <img src="assets/cbi_tickets_list.png" alt="Tickets List" class="thumb-mini" onclick="window.selectGalleryItem(5)" title="Ticket Queue & SLA Management">
-                                    <img src="assets/cbi_m365_overview.png" alt="M365 Cloud Architecture" class="thumb-mini" onclick="window.selectGalleryItem(6)" title="Microsoft 365 Tenant & License Telemetry">
-                                    <img src="assets/cbi_isa_demo.gif" alt="Isa Chat Live Demo" class="thumb-mini" onclick="window.selectGalleryItem(7)" title="Isa AI Assistant Live Conversation">
-                                </div>
-                            </div>
-
-                            <p class="desc" data-i18n="proj2_desc">An AI-powered ITSM platform with intelligent ticket deflection, structured intake, and deterministic AI validation. Uses a confined AI pattern: probabilistic model &rarr; structured output (typed JSON schema) &rarr; deterministic validation &rarr; fallback rules &rarr; application action. Integrates Microsoft Graph API for Intune device compliance telemetry.</p>
-                            <div class="tech-stack">Next.js 16, TypeScript, Supabase, Socket.io, Redis, Gemini 2.5 Flash, Microsoft Graph API, Zod</div>
-                            <div class="status" data-i18n="proj2_status">Status: Production Deployment - September 2026<br><span style="color: var(--c-ink-muted); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj2_status_2">Initial deployment: 22 users</span></div>
-                            <div class="confidential-notice" data-i18n="confidential_notice_2">🔒 UI Dashboards & Demos sanitized for public showcase (LGPD/Confidentiality protected).</div>
-                            <div class="links">
-                                <a href="https://github.com/TheyDreez/ticketing-system-portfolio" target="_blank" class="btn btn-outline" data-i18n="repo_link_2">Repository</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
+                    <!-- Project 4: Memory Lens -->
                     <div class="project-card">
                         <div class="card-inner">
                             <div class="dossier-tab-header">
@@ -212,6 +246,22 @@
                                 <span class="stamp-badge" style="border-color: #1E3A5F; color: #1E3A5F;">RESEARCH</span>
                             </div>
                             <h4>MEMORY LENS</h4>
+
+                            <!-- Interactive Visual Showcase -->
+                            <div class="project-visual-preview">
+                                <div class="preview-hero-wrapper" onclick="window.openGalleryLightbox('memoryLens', 0)" title="Click to expand / Clique para ampliar">
+                                    <img src="assets/memory_lens_preview.png" alt="Memory Lens - 3D Cognitive Computing & Spatial Interface" class="preview-hero-img" id="memorylens-preview-img">
+                                    <div class="expand-badge">
+                                        <span>⛶</span>
+                                        <span data-i18n="expand_click">Click to expand</span>
+                                    </div>
+                                </div>
+                                <div class="preview-thumbs thumbs-2">
+                                    <img src="assets/memory_lens_preview.png" alt="Memory Lens 3D Interface" class="thumb-mini active" onclick="window.selectGalleryItemCustom('memoryLens', 0)" title="3D Cognitive Vector Core & Spatial Interface">
+                                    <img src="assets/memory_lens_demo.gif" alt="Memory Lens Live Demo" class="thumb-mini" onclick="window.selectGalleryItemCustom('memoryLens', 1)" title="Spatial Navigation & Semantic Memory Recall Demo">
+                                </div>
+                            </div>
+
                             <p class="desc" data-i18n="proj3_desc">A cognitive computing platform combining semantic search with vector embeddings, knowledge graphs, episodic memory clustering, forgetting mechanisms (Ebbinghaus curve), behavioral analysis via Identity Engine, and a 3D spatial interface with custom WebGL shaders. Features 16 API routes, IDOR security tests, and a Chief Organism rendered with React Three Fiber.</p>
                             <div class="tech-stack">React, TypeScript, Express, Firebase, Google Gemini API, Three.js, React Three Fiber, Vitest</div>
                             <div class="status" data-i18n="proj3_status">Status: Active Research<br><span style="color: var(--c-ink-muted); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj3_status_2">Academic research under Prof. Dr. Fabrício Londero (UniFacens)</span></div>
@@ -221,7 +271,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 4 -->
+                    <!-- Project 5: FundiVR -->
                     <div class="project-card">
                         <div class="card-inner">
                             <div class="dossier-tab-header">
@@ -299,7 +349,7 @@
                             </div>
                             <div class="tech-item">
                                 <strong data-i18n="tech4_cat">Applied AI & Cognitive Systems</strong>
-                                <span data-i18n="tech4_val">Google Gemini API, structured outputs, semantic retrieval, vector embeddings, knowledge graphs, episodic memory, Three.js/React Three Fiber, WebGL shaders.</span>
+                                <span data-i18n="tech4_val">Google Gemini API, AMD ROCm, Vision-Language Models (VLM), structured outputs, semantic retrieval, vector embeddings, knowledge graphs, NetworkX, episodic memory, Three.js/React Three Fiber, WebGL shaders.</span>
                             </div>
                         </div>
                     </div>
@@ -418,10 +468,13 @@
                 confidential_notice: "🔒 UI Dashboards & Demos available for presentation during live interviews (NDA protected).",
                 repo_link: "Repository",
                 proj2_desc: "An AI-powered ITSM platform with intelligent ticket deflection, structured intake, and deterministic AI validation. Uses a confined AI pattern: probabilistic model &rarr; structured output (typed JSON schema) &rarr; deterministic validation &rarr; fallback rules &rarr; application action. Integrates Microsoft Graph API for Intune device compliance telemetry.",
-                proj2_status: "Status: Internal Pilot - September 2026",
+                proj2_status: "Status: Production Deployment - September 2026",
                 proj2_status_2: "Validated in corporate pilot with 22 users",
-                confidential_notice_2: "🔒 UI Dashboards & Demos available for presentation during live interviews (NDA protected).",
+                confidential_notice_2: "🔒 UI Dashboards & Demos sanitized for public showcase (LGPD/Confidentiality protected).",
                 repo_link_2: "Repository",
+                proj_cribum_desc: "A local, privacy-first multi-agent medical claim and prescription audit system built for the AMD Developer Hackathon (Health Track). Combines Open VLMs (Qwen2-VL via vLLM on AMD ROCm) with uncertainty-aware multi-hypothesis reading, clinical LASA safety databases, and NetworkX relational multigraph anomaly detection to expose systemic fraud rings.",
+                proj_cribum_status: "Status: Completed &middot; AMD Developer Hackathon ACT III",
+                proj_cribum_status_2: "Health &amp; Wellbeing Track &middot; Team Inédito Viável",
                 proj3_desc: "A cognitive computing platform combining semantic search with vector embeddings, knowledge graphs, episodic memory clustering, forgetting mechanisms (Ebbinghaus curve), behavioral analysis via Identity Engine, and a 3D spatial interface with custom WebGL shaders. Features 16 API routes, IDOR security tests, and a Chief Organism rendered with React Three Fiber.",
                 proj3_status: "Status: Active Research",
                 proj3_status_2: "Academic research under Prof. Dr. Fabrício Londero (UniFacens)",
@@ -449,7 +502,7 @@
                 tech3_cat: "Cloud, Data & Security",
                 tech3_val: "Google Cloud, Supabase, Firebase, Redis, Docker, PostgreSQL RLS, AES-256-GCM encryption.",
                 tech4_cat: "Applied AI & Cognitive Systems",
-                tech4_val: "Google Gemini API, structured outputs, semantic retrieval, vector embeddings, knowledge graphs, episodic memory, Three.js/React Three Fiber, WebGL shaders.",
+                tech4_val: "Google Gemini API, AMD ROCm, Vision-Language Models (VLM), structured outputs, semantic retrieval, vector embeddings, knowledge graphs, NetworkX, episodic memory, Three.js/React Three Fiber, WebGL shaders.",
                 eng_h2: "ENGINEERING APPROACH",
                 eng_sub: "Camera crew leaves. Engineering remains.",
                 eng_intro: "I design and build systems that combine AI with deterministic logic, security, and real operational constraints.",
@@ -511,6 +564,9 @@
                 proj2_status_2: "Validado em ambiente piloto corporativo com 22 usuários",
                 confidential_notice_2: "🔒 Dashboards de UI & Demos disponíveis para apresentação durante entrevistas ao vivo (protegido por NDA).",
                 repo_link_2: "Repositório",
+                proj_cribum_desc: "Um sistema multiagente local e privacy-first para auditoria de sinistros e prescrições médicas construído para o AMD Developer Hackathon (Trilha de Saúde). Combina VLMs abertos (Qwen2-VL via vLLM em AMD ROCm) com leitura multi-hipótese ciente de incerteza, validação clínica com banco de dados LASA e detecção de anomalias em multigrafos relacionais com NetworkX para identificar redes de fraude.",
+                proj_cribum_status: "Status: Concluído &middot; AMD Developer Hackathon ACT III",
+                proj_cribum_status_2: "Trilha Saúde e Bem-Estar &middot; Equipe Inédito Viável",
                 proj3_desc: "Uma plataforma de computação cognitiva combinando busca semântica com embeddings vetoriais, grafos de conhecimento, agrupamento de memória episódica, mecanismos de esquecimento (curva de Ebbinghaus), análise comportamental via Identity Engine, e uma interface espacial 3D com shaders WebGL customizados. Possui 16 rotas de API, testes de segurança IDOR e um Organismo Chefe renderizado com React Three Fiber.",
                 proj3_status: "Status: Pesquisa Ativa",
                 proj3_status_2: "Pesquisa acadêmica sob o Prof. Dr. Fabrício Londero (UniFacens)",
@@ -538,7 +594,7 @@
                 tech3_cat: "Nuvem, Dados & Segurança",
                 tech3_val: "Google Cloud, Supabase, Firebase, Redis, Docker, PostgreSQL RLS, criptografia AES-256-GCM.",
                 tech4_cat: "IA Aplicada & Sistemas Cognitivos",
-                tech4_val: "Google Gemini API, saídas estruturadas, recuperação semântica, embeddings vetoriais, grafos de conhecimento, memória episódica, Three.js/React Three Fiber, shaders WebGL.",
+                tech4_val: "Google Gemini API, AMD ROCm, Vision-Language Models (VLM), saídas estruturadas, recuperação semântica, embeddings vetoriais, grafos de conhecimento, NetworkX, memória episódica, Three.js/React Three Fiber, shaders WebGL.",
                 eng_h2: "ABORDAGEM DE ENGENHARIA",
                 eng_sub: "A equipe de filmagem vai embora. A engenharia fica.",
                 eng_intro: "Eu projeto e construo sistemas que combinam IA com lógica determinística, segurança e restrições operacionais reais.",
@@ -562,108 +618,165 @@
             }
         };
 
-        // Enterprise ITSM Ops Center Gallery Data
-        const itsmGallery = [
-            {
-                src: 'assets/cbi_fleet_radar.png',
-                titleEn: 'Fleet Radar & Intune Telemetry',
-                titlePt: 'Fleet Radar & Telemetria do Intune'
-            },
-            {
-                src: 'assets/cbi_dashboard_main.png',
-                titleEn: 'Enterprise ITSM Ops Center - Central Dashboard',
-                titlePt: 'Central de Operações ITSM - Painel Principal'
-            },
-            {
-                src: 'assets/cbi_rag_performance.png',
-                titleEn: 'RAG Engine Performance & Gemini Cost Metrics',
-                titlePt: 'Performance do Motor RAG & Métricas de Custo Gemini'
-            },
-            {
-                src: 'assets/cbi_ticket_deflection.png',
-                titleEn: 'Smart Ticket Deflection & Resolution Checklist',
-                titlePt: 'Deflexão Inteligente de Chamados & Checklist de Resolução'
-            },
-            {
-                src: 'assets/cbi_device_intelligence.png',
-                titleEn: 'Device Intelligence & Hardware Health',
-                titlePt: 'Inteligência de Dispositivos & Saúde de Hardware'
-            },
-            {
-                src: 'assets/cbi_tickets_list.png',
-                titleEn: 'Ticket Queue & Service Level Agreement (SLA)',
-                titlePt: 'Fila de Chamados & Gestão de SLA'
-            },
-            {
-                src: 'assets/cbi_m365_overview.png',
-                titleEn: 'Microsoft 365 Tenant & License Architecture',
-                titlePt: 'Arquitetura de Licenças & Tenant Microsoft 365'
-            },
-            {
-                src: 'assets/cbi_isa_demo.gif',
-                titleEn: 'Isa AI Assistant Live Conversation Demo',
-                titlePt: 'Assistente Isa AI - Demonstração de Conversa ao Vivo'
-            }
-        ];
+        // Project Galleries Data
+        const galleries = {
+            itsm: [
+                {
+                    src: 'assets/cbi_fleet_radar.png',
+                    titleEn: 'Fleet Radar & Intune Telemetry',
+                    titlePt: 'Fleet Radar & Telemetria do Intune'
+                },
+                {
+                    src: 'assets/cbi_dashboard_main.png',
+                    titleEn: 'Enterprise ITSM Ops Center - Central Dashboard',
+                    titlePt: 'Central de Operações ITSM - Painel Principal'
+                },
+                {
+                    src: 'assets/cbi_rag_performance.png',
+                    titleEn: 'RAG Engine Performance & Gemini Cost Metrics',
+                    titlePt: 'Performance do Motor RAG & Métricas de Custo Gemini'
+                },
+                {
+                    src: 'assets/cbi_ticket_deflection.png',
+                    titleEn: 'Smart Ticket Deflection & Resolution Checklist',
+                    titlePt: 'Deflexão Inteligente de Chamados & Checklist de Resolução'
+                },
+                {
+                    src: 'assets/cbi_device_intelligence.png',
+                    titleEn: 'Device Intelligence & Hardware Health',
+                    titlePt: 'Inteligência de Dispositivos & Saúde de Hardware'
+                },
+                {
+                    src: 'assets/cbi_tickets_list.png',
+                    titleEn: 'Ticket Queue & Service Level Agreement (SLA)',
+                    titlePt: 'Fila de Chamados & Gestão de SLA'
+                },
+                {
+                    src: 'assets/cbi_m365_overview.png',
+                    titleEn: 'Microsoft 365 Tenant & License Architecture',
+                    titlePt: 'Arquitetura de Licenças & Tenant Microsoft 365'
+                },
+                {
+                    src: 'assets/cbi_isa_demo.gif',
+                    titleEn: 'Isa AI Assistant Live Conversation Demo',
+                    titlePt: 'Assistente Isa AI - Demonstração de Conversa ao Vivo'
+                }
+            ],
+            cribum: [
+                {
+                    src: 'assets/cribum_audit_dashboard.png',
+                    titleEn: 'Cribum / AuditRx - Multimodal Prescription Inspection & Confidence Bounding Boxes',
+                    titlePt: 'Cribum / AuditRx - Inspeção Multimodal de Receitas & Bounding Boxes com Grau de Confiança'
+                },
+                {
+                    src: 'assets/cribum_graph_networkx.png',
+                    titleEn: 'Multi-Claim Relational Fraud Multigraph (NetworkX & Anomaly Detection)',
+                    titlePt: 'Multigrafo Relacional de Fraude em Sinistros (NetworkX & Detecção de Anomalias)'
+                },
+                {
+                    src: 'assets/cribum_demo.gif',
+                    titleEn: 'Multi-Agent Prescription Audit & Network Graph Investigation Walkthrough',
+                    titlePt: 'Auditoria Multiagente de Receitas & Investigação em Grafo'
+                }
+            ],
+            memoryLens: [
+                {
+                    src: 'assets/memory_lens_preview.png',
+                    titleEn: 'Memory Lens - 3D Cognitive Vector Core & Spatial Semantic Interface',
+                    titlePt: 'Memory Lens - Núcleo Vetorial Cognitivo 3D & Interface Semântica Espacial'
+                },
+                {
+                    src: 'assets/memory_lens_demo.gif',
+                    titleEn: 'Spatial Interface & Semantic Recall Walkthrough (Demo)',
+                    titlePt: 'Interface Espacial & Recuperação Semântica em Ação (Demonstração)'
+                }
+            ]
+        };
 
+        const heroMap = {
+            itsm: 'cbi-preview-img',
+            cribum: 'cribum-preview-img',
+            memoryLens: 'memorylens-preview-img'
+        };
+
+        const itsmGallery = galleries.itsm; // Backward compatibility
+
+        let activeGalleryKey = 'itsm';
         let currentGalleryIndex = 0;
         let isSingleImageMode = false;
         let singleImageTitle = '';
         let currentLang = localStorage.getItem('pref-lang-v2') || 'en';
 
-        function updateGalleryHero(index) {
-            currentGalleryIndex = index;
-            const hero = document.getElementById('cbi-preview-img');
-            const item = itsmGallery[index];
+        function updateGalleryHero(galleryKey, index) {
+            const list = galleries[galleryKey];
+            if (!list || !list[index]) return;
+            const heroId = heroMap[galleryKey];
+            const hero = document.getElementById(heroId);
+            const item = list[index];
             if (hero && item) {
                 hero.src = item.src;
                 hero.alt = currentLang === 'pt' ? item.titlePt : item.titleEn;
-            }
-            const thumbs = document.querySelectorAll('.thumb-mini');
-            thumbs.forEach((t, i) => {
-                if (i === index) {
-                    t.classList.add('active');
-                } else {
-                    t.classList.remove('active');
+                const card = hero.closest('.project-visual-preview');
+                if (card) {
+                    const thumbs = card.querySelectorAll('.thumb-mini');
+                    thumbs.forEach((t, i) => {
+                        if (i === index) {
+                            t.classList.add('active');
+                        } else {
+                            t.classList.remove('active');
+                        }
+                    });
                 }
-            });
+            }
         }
 
+        window.selectGalleryItemCustom = function(galleryKey, index) {
+            activeGalleryKey = galleryKey;
+            currentGalleryIndex = index;
+            updateGalleryHero(galleryKey, index);
+            window.openGalleryLightbox(galleryKey, index);
+        };
+
         window.selectGalleryItem = function(index) {
-            updateGalleryHero(index);
-            window.openLightbox(index);
+            window.selectGalleryItemCustom('itsm', index);
         };
 
         // Backward compatibility
         window.switchCbiPreview = function(src, el) {
-            const index = itsmGallery.findIndex(item => item.src === src);
+            const index = galleries.itsm.findIndex(item => item.src === src);
             if (index !== -1) {
                 window.selectGalleryItem(index);
             }
         };
 
-        window.openLightbox = function(index) {
-            if (index === undefined || index === null) index = currentGalleryIndex;
+        window.openGalleryLightbox = function(galleryKey, index) {
+            activeGalleryKey = galleryKey || 'itsm';
+            if (index === undefined || index === null) index = 0;
             currentGalleryIndex = index;
             isSingleImageMode = false;
-            
+
+            const list = galleries[activeGalleryKey] || galleries.itsm;
             const modal = document.getElementById('lightbox-modal');
             const img = document.getElementById('lightbox-img');
             const caption = document.getElementById('lightbox-caption');
             const counter = document.getElementById('lightbox-counter');
             const prevBtn = document.querySelector('.lightbox-prev');
             const nextBtn = document.querySelector('.lightbox-next');
-            const item = itsmGallery[currentGalleryIndex];
+            const item = list[currentGalleryIndex];
 
             if (modal && img && item) {
                 img.src = item.src;
                 if (caption) caption.textContent = currentLang === 'pt' ? item.titlePt : item.titleEn;
-                if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${itsmGallery.length}`;
-                if (prevBtn) prevBtn.style.display = 'flex';
-                if (nextBtn) nextBtn.style.display = 'flex';
+                if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${list.length}`;
+                if (prevBtn) prevBtn.style.display = list.length > 1 ? 'flex' : 'none';
+                if (nextBtn) nextBtn.style.display = list.length > 1 ? 'flex' : 'none';
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
+        };
+
+        window.openLightbox = function(index) {
+            window.openGalleryLightbox('itsm', index);
         };
 
         window.openSingleImageLightbox = function(src, title) {
@@ -702,32 +815,35 @@
 
         window.nextLightboxImage = function() {
             if (isSingleImageMode) return;
-            currentGalleryIndex = (currentGalleryIndex + 1) % itsmGallery.length;
+            const list = galleries[activeGalleryKey] || galleries.itsm;
+            currentGalleryIndex = (currentGalleryIndex + 1) % list.length;
             updateLightboxContent();
         };
 
         window.prevLightboxImage = function() {
             if (isSingleImageMode) return;
-            currentGalleryIndex = (currentGalleryIndex - 1 + itsmGallery.length) % itsmGallery.length;
+            const list = galleries[activeGalleryKey] || galleries.itsm;
+            currentGalleryIndex = (currentGalleryIndex - 1 + list.length) % list.length;
             updateLightboxContent();
         };
 
         function updateLightboxContent() {
+            const list = galleries[activeGalleryKey] || galleries.itsm;
             const img = document.getElementById('lightbox-img');
             const caption = document.getElementById('lightbox-caption');
             const counter = document.getElementById('lightbox-counter');
-            const item = itsmGallery[currentGalleryIndex];
+            const item = list[currentGalleryIndex];
 
             if (img && item) {
                 img.style.opacity = '0.35';
                 setTimeout(() => {
                     img.src = item.src;
                     if (caption) caption.textContent = currentLang === 'pt' ? item.titlePt : item.titleEn;
-                    if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${itsmGallery.length}`;
+                    if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${list.length}`;
                     img.style.opacity = '1';
                 }, 80);
             }
-            updateGalleryHero(currentGalleryIndex);
+            updateGalleryHero(activeGalleryKey, currentGalleryIndex);
         }
 
         function applyLanguage(lang) {
@@ -755,15 +871,23 @@
                 btnTextShort.textContent = translations[lang].lang_toggle_short;
             }
 
-            const hero = document.getElementById('cbi-preview-img');
-            if (hero && itsmGallery[currentGalleryIndex]) {
-                hero.alt = lang === 'pt' ? itsmGallery[currentGalleryIndex].titlePt : itsmGallery[currentGalleryIndex].titleEn;
-            }
+            // Update hero image alt tags for each gallery
+            Object.keys(galleries).forEach(key => {
+                const list = galleries[key];
+                const heroId = heroMap[key];
+                const hero = document.getElementById(heroId);
+                if (hero && list[0]) {
+                    hero.alt = lang === 'pt' ? list[0].titlePt : list[0].titleEn;
+                }
+            });
 
             const caption = document.getElementById('lightbox-caption');
             if (caption) {
-                if (!isSingleImageMode && itsmGallery[currentGalleryIndex]) {
-                    caption.textContent = lang === 'pt' ? itsmGallery[currentGalleryIndex].titlePt : itsmGallery[currentGalleryIndex].titleEn;
+                if (!isSingleImageMode) {
+                    const list = galleries[activeGalleryKey] || galleries.itsm;
+                    if (list[currentGalleryIndex]) {
+                        caption.textContent = lang === 'pt' ? list[currentGalleryIndex].titlePt : list[currentGalleryIndex].titleEn;
+                    }
                 }
             }
         }
