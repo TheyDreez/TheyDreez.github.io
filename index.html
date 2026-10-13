@@ -225,13 +225,30 @@
                         <div class="card-inner">
                             <div class="dossier-tab-header">
                                 <span class="dossier-code">📁 DOSSIER // ONBOARDING-OS</span>
-                                <span class="stamp-badge">CONFIDENTIAL</span>
+                                <span class="stamp-badge">ENTERPRISE</span>
                             </div>
                             <h4>ONBOARDING OS</h4>
+
+                            <!-- Interactive Visual Showcase -->
+                            <div class="project-visual-preview">
+                                <div class="preview-hero-wrapper" onclick="window.openGalleryLightbox('onboarding', 0)" title="Click to expand / Clique para ampliar">
+                                    <img src="assets/onboarding_dashboard.png" alt="Onboarding OS - Executive HR Telemetry Dashboard" class="preview-hero-img" id="onboarding-preview-img">
+                                    <div class="expand-badge">
+                                        <span>⛶</span>
+                                        <span data-i18n="expand_click">Click to expand</span>
+                                    </div>
+                                </div>
+                                <div class="preview-thumbs">
+                                    <img src="assets/onboarding_dashboard.png" alt="Executive HR Dashboard" class="thumb-mini active" onclick="window.selectGalleryItemCustom('onboarding', 0)" title="Executive HR Telemetry Dashboard & Provisioning Metrics">
+                                    <img src="assets/onboarding_admissoes.png" alt="Admissions Data Table" class="thumb-mini" onclick="window.selectGalleryItemCustom('onboarding', 1)" title="Admissions Lifecycle Data Grid & Pipeline Management">
+                                    <img src="assets/onboarding_login.png" alt="Multi-Tenant Login Portal" class="thumb-mini" onclick="window.selectGalleryItemCustom('onboarding', 2)" title="Multi-Tenant Enterprise Authentication Portal (Grupo CBI)">
+                                    <img src="assets/onboarding_demo.gif" alt="Onboarding OS Workflow Demo" class="thumb-mini" onclick="window.selectGalleryItemCustom('onboarding', 3)" title="Operational Lifecycle & Admissions Workflow Walkthrough">
+                                </div>
+                            </div>
+
                             <p class="desc" data-i18n="proj1_desc">A multi-tenant SaaS platform for onboarding automation connecting HR, IT, and managers. Features PostgreSQL Row-Level Security for tenant isolation, AES-256-GCM document encryption, automated LGPD data lifecycle (daily anonymization worker), validated state machine transitions, and real-time operational visibility.</p>
                             <div class="tech-stack">React 19, TypeScript, Node.js, Express, PostgreSQL, Supabase, Socket.io, Redis, Zod, bcrypt, JWT</div>
                             <div class="status" data-i18n="proj1_status">Status: Active Development - Target Deployment 2026</div>
-                            <div class="confidential-notice" data-i18n="confidential_notice">🔒 UI Dashboards & Demos available for presentation during live interviews (NDA protected).</div>
                             <div class="links">
                                 <a href="https://github.com/TheyDreez/onboarding-os-portfolio" target="_blank" class="btn btn-outline" data-i18n="repo_link">Repository</a>
                             </div>
@@ -250,15 +267,17 @@
                             <!-- Interactive Visual Showcase -->
                             <div class="project-visual-preview">
                                 <div class="preview-hero-wrapper" onclick="window.openGalleryLightbox('memoryLens', 0)" title="Click to expand / Clique para ampliar">
-                                    <img src="assets/memory_lens_preview.png" alt="Memory Lens - 3D Cognitive Computing & Spatial Interface" class="preview-hero-img" id="memorylens-preview-img">
+                                    <img src="assets/memory_lens_core.png" alt="Memory Lens - Cognitive Search Core & 3D Neural Organism" class="preview-hero-img" id="memorylens-preview-img">
                                     <div class="expand-badge">
                                         <span>⛶</span>
                                         <span data-i18n="expand_click">Click to expand</span>
                                     </div>
                                 </div>
-                                <div class="preview-thumbs thumbs-2">
-                                    <img src="assets/memory_lens_preview.png" alt="Memory Lens 3D Interface" class="thumb-mini active" onclick="window.selectGalleryItemCustom('memoryLens', 0)" title="3D Cognitive Vector Core & Spatial Interface">
-                                    <img src="assets/memory_lens_demo.gif" alt="Memory Lens Live Demo" class="thumb-mini" onclick="window.selectGalleryItemCustom('memoryLens', 1)" title="Spatial Navigation & Semantic Memory Recall Demo">
+                                <div class="preview-thumbs">
+                                    <img src="assets/memory_lens_core.png" alt="Cognitive Core & Search" class="thumb-mini active" onclick="window.selectGalleryItemCustom('memoryLens', 0)" title="Cognitive Search Core & 3D Neural Organism">
+                                    <img src="assets/memory_lens_graph.png" alt="3D Chief Organism Graph" class="thumb-mini" onclick="window.selectGalleryItemCustom('memoryLens', 1)" title="3D Chief Organism Knowledge & Synaptic Graph">
+                                    <img src="assets/memory_lens_technology.png" alt="Knowledge Architecture" class="thumb-mini" onclick="window.selectGalleryItemCustom('memoryLens', 2)" title="Knowledge Engineering, Vector Indexing Pipeline & Privacy Architecture">
+                                    <img src="assets/memory_lens_demo.gif" alt="Memory Lens Live Demo" class="thumb-mini" onclick="window.selectGalleryItemCustom('memoryLens', 3)" title="Cognitive Memory Recall & State Telemetry Walkthrough">
                                 </div>
                             </div>
 
@@ -679,16 +698,48 @@
                     titlePt: 'Auditoria Multiagente de Receitas & Investigação em Grafo'
                 }
             ],
+            onboarding: [
+                {
+                    src: 'assets/onboarding_dashboard.png',
+                    titleEn: 'Onboarding OS - Executive HR Telemetry Dashboard & Provisioning Metrics',
+                    titlePt: 'Onboarding OS - Painel de Telemetria Executiva de RH & Métricas de Provisionamento'
+                },
+                {
+                    src: 'assets/onboarding_admissoes.png',
+                    titleEn: 'Admissions Lifecycle Data Grid & Pipeline Management',
+                    titlePt: 'Grid de Gestão do Ciclo de Vida de Admissões & Pipeline'
+                },
+                {
+                    src: 'assets/onboarding_login.png',
+                    titleEn: 'Multi-Tenant Enterprise Authentication Portal (Grupo CBI)',
+                    titlePt: 'Portal Corporativo de Autenticação Multi-Tenant (Grupo CBI)'
+                },
+                {
+                    src: 'assets/onboarding_demo.gif',
+                    titleEn: 'Operational Lifecycle & Admissions Workflow Walkthrough (Demo)',
+                    titlePt: 'Ciclo de Vida Operacional & Demonstração do Fluxo de Admissão'
+                }
+            ],
             memoryLens: [
                 {
-                    src: 'assets/memory_lens_preview.png',
-                    titleEn: 'Memory Lens - 3D Cognitive Vector Core & Spatial Semantic Interface',
-                    titlePt: 'Memory Lens - Núcleo Vetorial Cognitivo 3D & Interface Semântica Espacial'
+                    src: 'assets/memory_lens_core.png',
+                    titleEn: 'Memory Lens - Cognitive Search Core & 3D Neural Organism',
+                    titlePt: 'Memory Lens - Núcleo de Busca Cognitiva & Organismo Neural 3D'
+                },
+                {
+                    src: 'assets/memory_lens_graph.png',
+                    titleEn: '3D Chief Organism Knowledge & Synaptic Graph (React Three Fiber & WebGL)',
+                    titlePt: 'Grafo Sináptico & Organismo Chefe 3D (React Three Fiber & WebGL)'
+                },
+                {
+                    src: 'assets/memory_lens_technology.png',
+                    titleEn: 'Knowledge Engineering, Vector Indexing Pipeline & Privacy Architecture',
+                    titlePt: 'Engenharia do Conhecimento, Pipeline de Indexação Vetorial & Privacidade'
                 },
                 {
                     src: 'assets/memory_lens_demo.gif',
-                    titleEn: 'Spatial Interface & Semantic Recall Walkthrough (Demo)',
-                    titlePt: 'Interface Espacial & Recuperação Semântica em Ação (Demonstração)'
+                    titleEn: 'Cognitive Memory Recall & State Telemetry Walkthrough (Demo)',
+                    titlePt: 'Recuperação de Memória Cognitiva & Telemetria de Estado (Demonstração)'
                 }
             ]
         };
@@ -696,6 +747,7 @@
         const heroMap = {
             itsm: 'cbi-preview-img',
             cribum: 'cribum-preview-img',
+            onboarding: 'onboarding-preview-img',
             memoryLens: 'memorylens-preview-img'
         };
 
