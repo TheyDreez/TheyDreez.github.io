@@ -84,6 +84,27 @@
             </div>
         </section>
 
+        <!-- SPECIALIZATION & RESEARCH BAR -->
+        <section id="academic" class="credentials-strip">
+            <div class="container">
+                <div class="credentials-label" data-i18n="acad_label">SPECIALIZATION &amp; APPLIED RESEARCH</div>
+                <div class="credentials-grid">
+                    <div class="credential-pill">
+                        <strong data-i18n="acad_1_title">Digital Twins, 5G, AI, IoT &amp; XR (360h)</strong>
+                        <span data-i18n="acad_1_desc">Specialization completed with 1 of 20 national merit scholarships (MCTI / Softex / UniFacens).</span>
+                    </div>
+                    <div class="credential-pill">
+                        <strong data-i18n="acad_2_title">ICT Technological Residency (TIC 51)</strong>
+                        <span data-i18n="acad_2_desc">Resident Researcher in Smart Cities, Industrial Digital Twins &amp; Acoustic Sensing (UniFacens / MCTI).</span>
+                    </div>
+                    <div class="credential-pill">
+                        <strong data-i18n="acad_3_title">Cognitive Computing Research &amp; Campus Mobile</strong>
+                        <span data-i18n="acad_3_desc">Memory Lens semantic research (Prof. Dr. Fabrício Londero, UniFacens) &bull; Cribum selected for Campus Mobile (Poli-USP / Instituto Claro).</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- PROFILE INTRO SECTION -->
         <section id="profile" class="profile-intro-section">
             <div class="container">
@@ -209,10 +230,10 @@
                     <div class="project-card">
                         <div class="card-inner">
                             <div class="dossier-tab-header">
-                                <span class="dossier-code">📁 DOSSIER // CRIBUM-AUDITRX</span>
-                                <span class="stamp-badge" style="border-color: #ED1C24; color: #ED1C24;">AMD ROCm &middot; AI DEFENSE</span>
+                                <span class="dossier-code">📁 DOSSIER // CRIBUM</span>
+                                <span class="stamp-badge" style="border-color: #10B981; color: #10B981;">CAMPUS MOBILE &middot; POLI-USP</span>
                             </div>
-                            <h4>CRIBUM (AUDITRX)</h4>
+                            <h4>CRIBUM (CLINICAL AI SUITE)</h4>
                             
                             <!-- Interactive Visual Showcase -->
                             <div class="project-visual-preview">
@@ -223,16 +244,18 @@
                                         <span data-i18n="expand_click">Click to expand</span>
                                     </div>
                                 </div>
-                                <div class="preview-thumbs thumbs-3">
-                                    <img src="assets/cribum_audit_dashboard.png" alt="Prescription Inspection" class="thumb-mini active" onclick="window.selectGalleryItemCustom('cribum', 0)" title="Multimodal Prescription Inspection & Confidence Bounding Boxes">
-                                    <img src="assets/cribum_graph_networkx.png" alt="Relational Fraud Graph" class="thumb-mini" onclick="window.selectGalleryItemCustom('cribum', 1)" title="Relational Fraud Multigraph & Anomaly Detection (NetworkX)">
-                                    <img src="assets/cribum_demo.gif" alt="Cribum Workflow Demo" class="thumb-mini" onclick="window.selectGalleryItemCustom('cribum', 2)" title="Multi-Agent Audit & Graph Investigation Walkthrough">
+                                <div class="preview-thumbs thumbs-5">
+                                    <img src="assets/cribum_audit_dashboard.png" alt="Prescription Inspection" class="thumb-mini active" onclick="window.selectGalleryItemCustom('cribum', 0)" title="Desktop: Multimodal Prescription Inspection & Confidence Bounding Boxes">
+                                    <img src="assets/cribum_graph_networkx.png" alt="Relational Fraud Graph" class="thumb-mini" onclick="window.selectGalleryItemCustom('cribum', 1)" title="Desktop: Relational Fraud Multigraph & Anomaly Detection (NetworkX)">
+                                    <img src="assets/cribum_demo.gif" alt="Cribum Workflow Demo" class="thumb-mini" onclick="window.selectGalleryItemCustom('cribum', 2)" title="Desktop: Multi-Agent Audit & Graph Investigation Walkthrough">
+                                    <img src="assets/cribum_mobile_home.png" alt="Cribum Mobile SUS Interface" class="thumb-mini" onclick="window.selectGalleryItemCustom('cribum', 3)" title="Mobile: SUS Digital Prescription & WCAG AAA Accessibility Interface">
+                                    <img src="assets/cribum_mobile_alert.png" alt="Cribum Mobile Dosage Alert" class="thumb-mini" onclick="window.selectGalleryItemCustom('cribum', 4)" title="Mobile: Deterministic Dosage Safety Alert (10 mg Prescribed vs 30 mg Box)">
                                 </div>
                             </div>
 
-                            <p class="desc" data-i18n="proj_cribum_desc">An offline-first pharmaceutical safety assistant selected for Campus Mobile (Instituto Claro / Poli-USP), extended for the AMD Developer Hackathon into a local multi-agent prescription audit system. Combines Open VLMs (Qwen2-VL via vLLM on AMD ROCm) with deterministic clinical safety databases (ANVISA/FDA), 36 automated tests, and NetworkX anomaly graphs.</p>
-                            <div class="tech-stack">Python, FastAPI, React 19, PyTorch, AMD ROCm, vLLM, NetworkX, TypeScript, TailwindCSS</div>
-                            <div class="status" data-i18n="proj_cribum_status">Status: Campus Mobile (Poli-USP / Claro) &bull; AMD Developer Hackathon<br><span style="color: var(--c-ink-muted); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj_cribum_status_2">36 Automated Tests &bull; Clinical Safety Engine &bull; Team Inédito Viável</span></div>
+                            <p class="desc" data-i18n="proj_cribum_desc">An offline-first mobile pharmaceutical safety assistant selected for Campus Mobile (Instituto Claro / Poli-USP), paired with a desktop clinical audit workstation. Combines Open VLMs (Qwen2-VL) with deterministic clinical safety validation (ANVISA/FDA), 36 automated tests, and NetworkX anomaly detection graphs.</p>
+                            <div class="tech-stack">Python, FastAPI, React 19, PyTorch, vLLM, NetworkX, TypeScript, TailwindCSS, Mobile PWA</div>
+                            <div class="status" data-i18n="proj_cribum_status">Status: Selected for Campus Mobile (Poli-USP / Instituto Claro)<br><span style="color: var(--c-ink-muted); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj_cribum_status_2">Mobile + Desktop Interfaces &bull; 36 Automated Tests &bull; Deterministic Clinical Engine</span></div>
                             <div class="links">
                                 <a href="https://github.com/TheyDreez/cribum" target="_blank" class="btn btn-outline" data-i18n="repo_link">Repository</a>
                             </div>
@@ -263,7 +286,7 @@
                                     <img src="assets/onboarding_v2_ged.png" alt="Encrypted GED Documents" class="thumb-mini" onclick="window.selectGalleryItemCustom('onboarding', 2)" title="AES-256-GCM Encrypted Document Vault (GED)">
                                     <img src="assets/onboarding_v2_auditoria.png" alt="Audit Timeline" class="thumb-mini" onclick="window.selectGalleryItemCustom('onboarding', 3)" title="Functional Audit Trail & ZapSign ICP-Brasil">
                                     <img src="assets/onboarding_v2_beneficios.png" alt="Benefits & Dependents" class="thumb-mini" onclick="window.selectGalleryItemCustom('onboarding', 4)" title="Benefits & Dependents Management">
-                                    <img src="assets/onboarding_v2_login.png" alt="Corporate Multi-Tenant Login" class="thumb-mini" onclick="window.selectGalleryItemCustom('onboarding', 5)" title="Corporate Multi-Tenant Login Portal">
+                                    <img src="assets/onboarding_v2_mobile_portal.png" alt="Mobile Candidate Portal" class="thumb-mini" onclick="window.selectGalleryItemCustom('onboarding', 5)" title="Mobile Candidate Portal: Status, Document Upload & Admission Track">
                                 </div>
                             </div>
 
@@ -319,22 +342,6 @@
                                 <span class="stamp-badge" style="border-color: #C58B17; color: #C58B17;">DELIVERED</span>
                             </div>
                             <h4>FUNDIVR</h4>
-                            <!-- Interactive Visual Showcase -->
-                            <div class="project-visual-preview">
-                                <div class="preview-hero-wrapper" onclick="window.openGalleryLightbox('fundivr', 0)" title="Click to expand / Clique para ampliar">
-                                    <img src="assets/fundivr_frame_3.png" alt="FundiVR - Molten Aluminum Pour & Live Safety HUD" class="preview-hero-img" id="fundivr-preview-img">
-                                    <div class="expand-badge">
-                                        <span>⛶</span>
-                                        <span data-i18n="expand_click">Click to expand</span>
-                                    </div>
-                                </div>
-                                <div class="preview-thumbs">
-                                    <img src="assets/fundivr_frame_3.png" alt="Molten Pour Safety HUD" class="thumb-mini active" onclick="window.selectGalleryItemCustom('fundivr', 0)" title="Molten Aluminum Level & Safe Operation HUD">
-                                    <img src="assets/fundivr_frame_1.png" alt="Thermal Risk Zone" class="thumb-mini" onclick="window.selectGalleryItemCustom('fundivr', 1)" title="Industrial Furnace Thermal Risk & Restricted Area HUD">
-                                    <img src="assets/fundivr_frame_2.png" alt="Skimming Telemetry" class="thumb-mini" onclick="window.selectGalleryItemCustom('fundivr', 2)" title="Real-Time Skimming Progress Telemetry (82%)">
-                                    <img src="assets/fundivr_frame_4.png" alt="Furnace Cockpit Overview" class="thumb-mini" onclick="window.selectGalleryItemCustom('fundivr', 3)" title="Full Industrial Furnace Simulator Cockpit">
-                                </div>
-                            </div>
                             <p class="desc" data-i18n="proj4_desc">A web-based VR simulator for training aluminum furnace operators. Features a full operational training workflow (PPE check, charge inspection, thermal control, skimming, emergency shutdown), real-time telemetry via WebSocket, automated performance scoring with weighted evaluation, and a resilient demo mode for presentations without database dependencies.</p>
                             <div class="tech-stack">React, TypeScript, Fastify, PostgreSQL, Prisma, WebSocket, Docker Compose, pnpm monorepo, Vitest</div>
                             <div class="status" data-i18n="proj4_status">Status: Delivered<br><span style="color: var(--c-ink-muted); font-family: var(--font-body); font-size: 0.85rem; display: block; margin-top: 6px; font-weight: 500;" data-i18n="proj4_status_2">Digital Twin & 5G Residency (TIC 51)</span></div>
@@ -405,7 +412,7 @@
                             </div>
                             <div class="tech-item">
                                 <strong data-i18n="tech4_cat">Applied AI & Cognitive Systems</strong>
-                                <span data-i18n="tech4_val">Google Gemini API, AMD ROCm, Vision-Language Models (VLM), structured outputs, semantic retrieval, vector embeddings, knowledge graphs, NetworkX, episodic memory, Three.js/React Three Fiber, WebGL shaders.</span>
+                                <span data-i18n="tech4_val">Google Gemini API, Vision-Language Models (VLM), structured outputs, semantic retrieval, vector embeddings, knowledge graphs, NetworkX, episodic memory, Three.js/React Three Fiber, WebGL shaders.</span>
                             </div>
                             <div class="tech-item">
                                 <strong data-i18n="tech5_cat">Languages &amp; Cross-Cultural Communication</strong>
@@ -523,6 +530,13 @@
                 beyond_p1: "Outside of engineering, I enjoy balancing analytical work with creative and social spaces: I follow electronic music, participate in a book club in Sorocaba, and play tabletop RPGs.",
                 beyond_p2: "I'm also currently going through the process of obtaining Spanish citizenship through my grandmother, who was born in Spain. One of my personal goals is to visit Calera de León, where she was born, and explore that part of my family history firsthand.",
                 beyond_p3: "Whether discussing a book, building a fictional world around a table, or tracing my family roots across generations, I enjoy discovering different environments, ideas, and perspectives.",
+                acad_label: "SPECIALIZATION & APPLIED RESEARCH",
+                acad_1_title: "Digital Twins, 5G, AI, IoT & XR (360h)",
+                acad_1_desc: "Specialization completed with 1 of 20 national merit scholarships (MCTI / Softex / UniFacens).",
+                acad_2_title: "ICT Technological Residency (TIC 51)",
+                acad_2_desc: "Resident Researcher in Smart Cities, Industrial Digital Twins & Acoustic Sensing (UniFacens / MCTI).",
+                acad_3_title: "Cognitive Computing Research & Campus Mobile",
+                acad_3_desc: "Memory Lens semantic research (Prof. Dr. Fabrício Londero, UniFacens) &bull; Cribum selected for Campus Mobile (Poli-USP / Instituto Claro).",
                 proj_vaguinhas_desc: "A 24/7 production WhatsApp bot and JSON API aggregating tech roles across 16 Brazilian and international sources (Ashby, Greenhouse, Lever, YC, HN, VTEX, We Work Remotely, GitHub, and recruiter channels). Engineered with a durable PostgreSQL Outbox (FOR UPDATE SKIP LOCKED), Traffic Guard concurrency/RAM admission control, real-time expired-job validation (JSON-LD & ATS probes), and 27 automated tests.",
                 proj_vaguinhas_status: "Status: Live in Production (24/7 on Render + Supabase)",
                 proj_vaguinhas_status_2: "16 Sources &bull; 27 Automated Tests &bull; Single-Message UX &bull; Anti-Trap Filtering",
@@ -539,9 +553,9 @@
                 proj2_status_2: "Validated in corporate pilot with 22 users",
                 confidential_notice_2: "🔒 UI Dashboards & Demos sanitized for public showcase (LGPD/Confidentiality protected).",
                 repo_link_2: "Repository",
-                proj_cribum_desc: "An offline-first pharmaceutical safety assistant selected for Campus Mobile (Instituto Claro / Poli-USP), extended for the AMD Developer Hackathon into a local multi-agent prescription audit system. Combines Open VLMs (Qwen2-VL via vLLM on AMD ROCm) with deterministic clinical safety databases (ANVISA/FDA), 36 automated tests, and NetworkX anomaly graphs.",
-                proj_cribum_status: "Status: Campus Mobile (Poli-USP / Claro) &bull; AMD Developer Hackathon",
-                proj_cribum_status_2: "36 Automated Tests &bull; Clinical Safety Engine &bull; Team Inédito Viável",
+                proj_cribum_desc: "An offline-first mobile pharmaceutical safety assistant selected for Campus Mobile (Instituto Claro / Poli-USP), paired with a desktop clinical audit workstation. Combines Open VLMs (Qwen2-VL) with deterministic clinical safety validation (ANVISA/FDA), 36 automated tests, and NetworkX anomaly detection graphs.",
+                proj_cribum_status: "Status: Selected for Campus Mobile (Poli-USP / Instituto Claro)",
+                proj_cribum_status_2: "Mobile + Desktop Interfaces &bull; 36 Automated Tests &bull; Deterministic Clinical Engine",
                 proj3_desc: "A cognitive computing platform combining semantic search with vector embeddings, knowledge graphs, episodic memory clustering, forgetting mechanisms (Ebbinghaus curve), behavioral analysis via Identity Engine, and a 3D spatial interface with custom WebGL shaders. Features 16 API routes, IDOR security tests, and a Chief Organism rendered with React Three Fiber.",
                 proj3_status: "Status: Active Research",
                 proj3_status_2: "Academic research under Prof. Dr. Fabrício Londero (UniFacens) &bull; Targeting submission to ACDSA",
@@ -569,7 +583,7 @@
                 tech3_cat: "Cloud, Data & Security",
                 tech3_val: "Google Cloud (Cloud Run, Cloud SQL), PostgreSQL (Citizen Databases / Metropolitan Concessions), Supabase, Firebase, Redis, Docker, PostgreSQL RLS, AES-256-GCM encryption, strict LGPD compliance.",
                 tech4_cat: "Applied AI & Cognitive Systems",
-                tech4_val: "Google Gemini API, AMD ROCm, Vision-Language Models (VLM), structured outputs, semantic retrieval, vector embeddings, knowledge graphs, NetworkX, episodic memory, Three.js/React Three Fiber, WebGL shaders.",
+                tech4_val: "Google Gemini API, Vision-Language Models (VLM), structured outputs, semantic retrieval, vector embeddings, knowledge graphs, NetworkX, episodic memory, Three.js/React Three Fiber, WebGL shaders.",
                 tech5_cat: "Languages & Cross-Cultural Communication",
                 tech5_val: "English (C1+ / Fluent &bull; 2-Year Full Immersion Happy & Co. [Speaking 4.5/5, Listening 4.4/5] &bull; Former English Host & Mentor), Spanish (Intermediate / Technical Communication), Portuguese (Native).",
                 eng_h2: "ENGINEERING APPROACH",
@@ -624,6 +638,13 @@
                 beyond_p1: "Fora da engenharia, gosto de equilibrar o trabalho analítico com espaços criativos e sociais: acompanho música eletrônica, faço parte de um clube do livro em Sorocaba e jogo RPG de mesa.",
                 beyond_p2: "Também estou passando pelo processo de obtenção de cidadania espanhola através da minha avó, que nasceu na Espanha. Um dos meus objetivos pessoais é visitar Calera de León, onde ela nasceu, e explorar essa parte da história da minha família pessoalmente.",
                 beyond_p3: "Seja discutindo um livro, construindo um mundo ficcional ao redor de uma mesa ou traçando as raízes da minha família por gerações, gosto de explorar diferentes ambientes, ideias e perspectivas.",
+                acad_label: "ESPECIALIZAÇÃO & PESQUISA APLICADA",
+                acad_1_title: "Gêmeo Digital em 5G, IA, IoT e XR (360h)",
+                acad_1_desc: "Especialização concluída com 1 das 20 bolsas de mérito nacional (MCTI / Softex / UniFacens).",
+                acad_2_title: "Residência Tecnológica em TIC 51",
+                acad_2_desc: "Pesquisador Residente em Cidades Inteligentes, Gêmeos Digitais e Sensoriamento Acústico (UniFacens / MCTI).",
+                acad_3_title: "Pesquisa em Computação Cognitiva & Campus Mobile",
+                acad_3_desc: "Pesquisa do Memory Lens (Prof. Dr. Fabrício Londero, UniFacens) &bull; Cribum selecionado para o Campus Mobile (Poli-USP / Instituto Claro).",
                 proj_vaguinhas_desc: "Bot de WhatsApp e API JSON em produção 24/7 que agrega vagas tech de 16 fontes brasileiras e internacionais (Ashby, Greenhouse, Lever, YC, HN, VTEX, We Work Remotely, GitHub e canais de recrutamento). Construído com fila Outbox durável no PostgreSQL (FOR UPDATE SKIP LOCKED), Traffic Guard contra concorrência/memória, validador de vaga encerrada em tempo real (JSON-LD e ATS) e 27 testes automatizados.",
                 proj_vaguinhas_status: "Status: Em Produção 24/7 (Render + Supabase)",
                 proj_vaguinhas_status_2: "16 Fontes &bull; 27 Testes Automatizados &bull; UX em Mensagem Única &bull; Filtro Anti-Armadilha",
@@ -640,9 +661,9 @@
                 proj2_status_2: "Validado em ambiente piloto corporativo com 22 usuários",
                 confidential_notice_2: "🔒 Dashboards de UI & Demos disponíveis para apresentação durante entrevistas ao vivo (protegido por NDA).",
                 repo_link_2: "Repositório",
-                proj_cribum_desc: "Assistente offline-first de segurança farmacêutica selecionado para o Campus Mobile (Instituto Claro / Poli-USP) e expandido no AMD Developer Hackathon para um sistema multiagente de auditoria de receitas. Combina VLMs abertos (Qwen2-VL via vLLM no AMD ROCm) com validação clínica determinística (ANVISA/FDA), 36 testes automatizados e grafos de anomalia NetworkX.",
-                proj_cribum_status: "Status: Selecionado para o Campus Mobile (Poli-USP / Claro) &bull; AMD Developer Hackathon",
-                proj_cribum_status_2: "36 Testes Automatizados &bull; Motor Clínico Determinístico &bull; Time Inédito Viável",
+                proj_cribum_desc: "Assistente mobile offline-first de segurança farmacêutica selecionado para o Campus Mobile (Instituto Claro / Poli-USP), integrado a uma estação desktop de auditoria clínica. Combina VLMs abertos (Qwen2-VL) com validação clínica determinística (ANVISA/FDA), 36 testes automatizados e grafos de detecção de anomalias com NetworkX.",
+                proj_cribum_status: "Status: Selecionado para o Campus Mobile (Poli-USP / Instituto Claro)",
+                proj_cribum_status_2: "Interfaces Mobile + Desktop &bull; 36 Testes Automatizados &bull; Motor Clínico Determinístico",
                 proj3_desc: "Uma plataforma de computação cognitiva combinando busca semântica com embeddings vetoriais, grafos de conhecimento, agrupamento de memória episódica, mecanismos de esquecimento (curva de Ebbinghaus), análise comportamental via Identity Engine, e uma interface espacial 3D com shaders WebGL customizados. Possui 16 rotas de API, testes de segurança IDOR e um Organismo Chefe renderizado com React Three Fiber.",
                 proj3_status: "Status: Pesquisa Ativa",
                 proj3_status_2: "Pesquisa acadêmica sob o Prof. Dr. Fabrício Londero (UniFacens) &bull; Alvo de submissão para o ACDSA",
@@ -670,7 +691,7 @@
                 tech3_cat: "Nuvem, Dados & Segurança",
                 tech3_val: "Google Cloud (Cloud Run, Cloud SQL), PostgreSQL (Bancos de Cidadãos / Concessões Metropolitanas), Supabase, Firebase, Redis, Docker, PostgreSQL RLS, criptografia AES-256-GCM, rigorosa conformidade LGPD.",
                 tech4_cat: "IA Aplicada & Sistemas Cognitivos",
-                tech4_val: "Google Gemini API, AMD ROCm, Vision-Language Models (VLM), saídas estruturadas, recuperação semântica, embeddings vetoriais, grafos de conhecimento, NetworkX, memória episódica, Three.js/React Three Fiber, shaders WebGL.",
+                tech4_val: "Google Gemini API, Vision-Language Models (VLM), saídas estruturadas, recuperação semântica, embeddings vetoriais, grafos de conhecimento, NetworkX, memória episódica, Three.js/React Three Fiber, shaders WebGL.",
                 tech5_cat: "Idiomas & Comunicação Multicultural",
                 tech5_val: "Inglês (C1+ / Fluente &bull; Imersão Total de 2 Anos na Happy & Co. [Speaking 4,5/5, Listening 4,4/5] &bull; Ex-Host e Mentor no Clube Poliglota), Espanhol (Intermediário / Comunicação Técnica), Português (Nativo).",
                 eng_h2: "ABORDAGEM DE ENGENHARIA",
@@ -744,18 +765,28 @@
             cribum: [
                 {
                     src: 'assets/cribum_audit_dashboard.png',
-                    titleEn: 'Cribum / AuditRx - Multimodal Prescription Inspection & Confidence Bounding Boxes',
-                    titlePt: 'Cribum / AuditRx - Inspeção Multimodal de Receitas & Bounding Boxes com Grau de Confiança'
+                    titleEn: 'Desktop Audit Workstation - Multimodal Prescription Inspection & Confidence Bounding Boxes',
+                    titlePt: 'Estação Desktop de Auditoria - Inspeção Multimodal de Receitas & Bounding Boxes'
                 },
                 {
                     src: 'assets/cribum_graph_networkx.png',
-                    titleEn: 'Multi-Claim Relational Fraud Multigraph (NetworkX & Anomaly Detection)',
-                    titlePt: 'Multigrafo Relacional de Fraude em Sinistros (NetworkX & Detecção de Anomalias)'
+                    titleEn: 'Desktop Audit Workstation - Multi-Claim Relational Fraud Multigraph (NetworkX)',
+                    titlePt: 'Estação Desktop de Auditoria - Multigrafo Relacional de Fraude (NetworkX)'
                 },
                 {
                     src: 'assets/cribum_demo.gif',
-                    titleEn: 'Multi-Agent Prescription Audit & Network Graph Investigation Walkthrough',
-                    titlePt: 'Auditoria Multiagente de Receitas & Investigação em Grafo'
+                    titleEn: 'Desktop Audit Workstation - Multi-Agent Prescription Audit Walkthrough',
+                    titlePt: 'Estação Desktop de Auditoria - Fluxo de Auditoria Multiagente'
+                },
+                {
+                    src: 'assets/cribum_mobile_home.png',
+                    titleEn: 'Mobile App - SUS Digital Prescription Verification & WCAG 2.2 AAA Accessibility',
+                    titlePt: 'App Mobile - Conferência de Receita Digital SUS & Acessibilidade WCAG 2.2 AAA'
+                },
+                {
+                    src: 'assets/cribum_mobile_alert.png',
+                    titleEn: 'Mobile App - Deterministic Dosage Safety Alert (10 mg Prescribed vs 30 mg Box)',
+                    titlePt: 'App Mobile - Alerta Determinístico de Dosagem (Receita 10 mg vs Caixa 30 mg)'
                 }
             ],
             onboarding: [
@@ -785,31 +816,9 @@
                     titlePt: 'Gestão de Benefícios & Dependentes por Concessão'
                 },
                 {
-                    src: 'assets/onboarding_v2_login.png',
-                    titleEn: 'Multi-Tenant Enterprise Authentication Portal (Grupo CBI)',
-                    titlePt: 'Portal Corporativo de Autenticação Multi-Tenant (Grupo CBI)'
-                }
-            ],
-            fundivr: [
-                {
-                    src: 'assets/fundivr_frame_3.png',
-                    titleEn: 'FundiVR - Molten Aluminum Pour & Holographic Level Safety HUD (68%)',
-                    titlePt: 'FundiVR - Vazamento de Alumínio Líquido & HUD Holográfico de Segurança (68%)'
-                },
-                {
-                    src: 'assets/fundivr_frame_1.png',
-                    titleEn: 'Industrial Furnace Floor - Thermal Risk & Restricted Zone VR Telemetry (290 °C)',
-                    titlePt: 'Chão de Fábrica em VR - Alerta de Risco Térmico & Área Restrita (290 °C)'
-                },
-                {
-                    src: 'assets/fundivr_frame_2.png',
-                    titleEn: 'Furnace Skimming Procedure - Real-Time Coverage Evaluation (82%)',
-                    titlePt: 'Operação de Escumação - Avaliação de Cobertura em Tempo Real (82%)'
-                },
-                {
-                    src: 'assets/fundivr_frame_4.png',
-                    titleEn: 'Industrial Furnace Digital Twin - Full Operator Telemetry Cockpit',
-                    titlePt: 'Gêmeo Digital de Forno Industrial - Cockpit Completo de Telemetria'
+                    src: 'assets/onboarding_v2_mobile_portal.png',
+                    titleEn: 'Mobile Candidate Portal - Document Upload, Status & Admission Track',
+                    titlePt: 'Portal Mobile do Candidato - Envio de Documentos, Status & Trilha de Admissão'
                 }
             ],
             memoryLens: [
@@ -840,8 +849,7 @@
             itsm: 'cbi-preview-img',
             cribum: 'cribum-preview-img',
             onboarding: 'onboarding-preview-img',
-            memoryLens: 'memorylens-preview-img',
-            fundivr: 'fundivr-preview-img'
+            memoryLens: 'memorylens-preview-img'
         };
 
         const itsmGallery = galleries.itsm; // Backward compatibility
